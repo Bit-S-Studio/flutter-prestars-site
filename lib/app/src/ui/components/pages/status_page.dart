@@ -33,7 +33,7 @@ class StatusPage extends StatelessWidget {
             child: AutoSizeText(
               title,
               style: ThemeService.styles
-                  .montserratBody(color: ThemeService.colors.textPrimary),
+                  .exo2Body(color: ThemeService.colors.textPrimary),
               textAlign: TextAlign.center,
               maxFontSize: 20,
               minFontSize: 12,

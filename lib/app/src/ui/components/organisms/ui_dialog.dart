@@ -48,7 +48,7 @@ class UiDialog extends StatelessWidget {
               children: [
                 AutoSizeText(
                   text ?? '',
-                  style: ThemeService.styles.montserratBody(
+                  style: ThemeService.styles.exo2Body(
                       color: titleColor ?? ThemeService.colors.secondary,
                       size: 21),
                   textAlign: TextAlign.center,
@@ -57,8 +57,8 @@ class UiDialog extends StatelessWidget {
                 if (detail != null)
                   AutoSizeText(
                     detail ?? '',
-                    style: ThemeService.styles.montserratBody(
-                        color: ThemeService.colors.textTerciary),
+                    style: ThemeService.styles
+                        .exo2Body(color: ThemeService.colors.textTerciary),
                     textAlign: TextAlign.center,
                   ),
               ],

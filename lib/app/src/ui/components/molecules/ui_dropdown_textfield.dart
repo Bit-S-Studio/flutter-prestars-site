@@ -76,11 +76,11 @@ class _UiDropdownTextFieldState extends State<UiDropdownTextField> {
                 focusNode: controller.focusNode,
                 autofocus: false,
                 formControlName: widget.searchTagsFormControlName,
-                style: ThemeService.styles.montserratCaption(),
+                style: ThemeService.styles.exo2Caption(),
                 cursorColor: ThemeService.colors.iconPrimary,
                 decoration: InputDecoration(
                   hintText: widget.hint,
-                  hintStyle: ThemeService.styles.montserratCaption(),
+                  hintStyle: ThemeService.styles.exo2Caption(),
                   focusedBorder: UnderlineInputBorder(
                       borderSide:
                           BorderSide(color: ThemeService.colors.iconPrimary),

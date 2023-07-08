@@ -10,9 +10,9 @@ class UiSelectDate {
             data: Theme.of(context).copyWith(
               textTheme: TextTheme(
                   headlineSmall: ThemeService.styles
-                      .montserratBody(color: ThemeService.colors.terciary),
+                      .exo2Body(color: ThemeService.colors.terciary),
                   titleLarge: ThemeService.styles
-                      .montserratBody(color: ThemeService.colors.terciary)),
+                      .exo2Body(color: ThemeService.colors.terciary)),
               colorScheme: ColorScheme.light(
                 primary:
                     ThemeService.colors.secondary, // header background color

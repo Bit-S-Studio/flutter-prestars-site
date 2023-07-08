@@ -14,14 +14,12 @@ class UiLogo extends StatelessWidget {
       padding: EdgeInsets.all(context.height * 0.03),
       child: Center(
         child: SizedBox(
-          height: height ?? context.height * (context.isMobile ? 2 : 0.4),
+          height: height ?? 60,
           child: Image.asset(
-            isMobile
-                ? ThemeService.images.logoMobile
-                : context.isMobile
-                    ? ThemeService.images.logoMobile
-                    : ThemeService.images.logo,
-            scale: scale ?? 1,
+            ThemeService.images.logo,
+            // scale: scale ?? 1,
+            filterQuality: FilterQuality.high,
+            fit: BoxFit.cover,
           ),
         ),
       ),

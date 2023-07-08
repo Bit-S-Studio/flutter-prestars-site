@@ -12,9 +12,9 @@ class UiSimpleRichText extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoSizeText.rich(TextSpan(
         text: '$prefix: ',
-        style: ThemeService.styles.montserratBody(fontWeight: FontWeight.w700),
+        style: ThemeService.styles.exo2Body(fontWeight: FontWeight.w700),
         children: [
-          TextSpan(text: text, style: ThemeService.styles.montserratBody())
+          TextSpan(text: text, style: ThemeService.styles.exo2Body())
         ]));
   }
 }

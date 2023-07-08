@@ -53,8 +53,7 @@ class UiFieldComments extends StatelessWidget {
       // onSubmitted: onSubmitted,
       // validationMessages: ValidationMessages().call,
       controller: controller,
-      style: ThemeService.styles
-          .montserratBody(color: ThemeService.colors.terciary),
+      style: ThemeService.styles.exo2Body(color: ThemeService.colors.terciary),
       obscureText: obscureText ?? false,
       cursorColor: ThemeService.colors.textPrimary,
       cursorWidth: 1,
@@ -62,7 +61,7 @@ class UiFieldComments extends StatelessWidget {
         isDense: true,
         contentPadding:
             const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
-        helperStyle: ThemeService.styles.montserratBody(),
+        helperStyle: ThemeService.styles.exo2Body(),
         errorStyle: const TextStyle(height: 1),
         prefixIcon: prefix,
         suffixIcon: suffix,
@@ -97,9 +96,9 @@ class UiFieldComments extends StatelessWidget {
         ),
         labelText: labelText,
         hintText: hintText,
-        labelStyle: ThemeService.styles
-            .montserratBody(color: ThemeService.colors.terciary),
-        floatingLabelStyle: ThemeService.styles.montserratBody(
+        labelStyle:
+            ThemeService.styles.exo2Body(color: ThemeService.colors.terciary),
+        floatingLabelStyle: ThemeService.styles.exo2Body(
           color: ThemeService.colors.secondary,
         ),
       ),

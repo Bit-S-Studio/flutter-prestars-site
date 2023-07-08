@@ -49,7 +49,7 @@ class UiDropDownFilled<T> extends StatelessWidget {
                 maxFontSize: 16,
                 minFontSize: 12,
                 overflow: TextOverflow.ellipsis,
-                style: ThemeService.styles.montserratCaption(
+                style: ThemeService.styles.exo2Caption(
                     color:
                         filled ? labelColor ?? ThemeService.colors.white : null,
                     size: filled ? 12 : null)),
@@ -69,7 +69,7 @@ class UiDropDownFilled<T> extends StatelessWidget {
                 dropdownColor: ThemeService.colors.terciary,
                 isExpanded: true,
                 itemHeight: 60,
-                style: ThemeService.styles.montserratCaption(),
+                style: ThemeService.styles.exo2Caption(),
                 // textAlignVertical: TextAlignVertical.center,
                 decoration: InputDecoration(
                   filled: filled,
@@ -77,7 +77,7 @@ class UiDropDownFilled<T> extends StatelessWidget {
                   isDense: true,
                   contentPadding: EdgeInsets.symmetric(
                       vertical: 13.0, horizontal: filled ? 16 : 0),
-                  helperStyle: ThemeService.styles.montserratCaption(),
+                  helperStyle: ThemeService.styles.exo2Caption(),
                   errorStyle: const TextStyle(height: 1),
                   focusedBorder: isOutlined
                       ? OutlineInputBorder(
@@ -124,8 +124,8 @@ class UiDropDownFilled<T> extends StatelessWidget {
                           borderRadius: BorderRadius.circular(filled ? 16 : 0))
                       : UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(filled ? 16 : 0)),
-                  labelStyle: ThemeService.styles.montserratCaption(),
-                  floatingLabelStyle: ThemeService.styles.montserratCaption(),
+                  labelStyle: ThemeService.styles.exo2Caption(),
+                  floatingLabelStyle: ThemeService.styles.exo2Caption(),
                 ),
 
                 selectedItemBuilder: selectedItemBuilder,

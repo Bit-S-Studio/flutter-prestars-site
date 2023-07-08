@@ -30,7 +30,7 @@ class ExpandedWithLine extends StatelessWidget {
             AutoSizeText(
               title,
               style: ThemeService.styles
-                  .montserratBody(color: ThemeService.colors.terciary),
+                  .exo2Body(color: ThemeService.colors.terciary),
               overflow: TextOverflow.clip,
             ),
             const SizedBox(width: 16),

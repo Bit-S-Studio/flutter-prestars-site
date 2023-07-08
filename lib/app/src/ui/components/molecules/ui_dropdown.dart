@@ -37,7 +37,7 @@ class UiDropDown<T> extends StatelessWidget {
             child: AutoSizeText.rich(
               TextSpan(
                   text: labelText ?? '',
-                  style: ThemeService.styles.montserratCaption(),
+                  style: ThemeService.styles.exo2Caption(),
                   children: [
                     if (isMandatory)
                       TextSpan(
@@ -64,7 +64,7 @@ class UiDropDown<T> extends StatelessWidget {
                     ValidationMessages.value(formControlName: labelText),
                 isExpanded: true,
                 itemHeight: 60,
-                style: ThemeService.styles.montserratCaption(size: 16),
+                style: ThemeService.styles.exo2Caption(size: 16),
                 selectedItemBuilder: selectedItemBuilder,
                 decoration: InputDecoration(
                   errorStyle:

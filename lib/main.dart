@@ -7,12 +7,11 @@ import 'prestars_exports.dart';
 void mainApp(Environment env) async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    name: 'ela-mob',
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  PermissionService.getPermissionStatus(PermissionType.photos);
-  PermissionService.getPermissionStatus(PermissionType.storage);
-  PermissionService.getPermissionStatus(PermissionType.location);
+  // PermissionService.getPermissionStatus(PermissionType.photos);
+  // PermissionService.getPermissionStatus(PermissionType.storage);
+  // PermissionService.getPermissionStatus(PermissionType.location);
   AppBinds.call();
   return runApp(App(env: env));
 }

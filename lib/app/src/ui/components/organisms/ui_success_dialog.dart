@@ -34,7 +34,7 @@ class UiSuccessDialog extends StatelessWidget {
               minFontSize: 20,
               maxLines: 3,
               style: ThemeService.styles
-                  .montserratBody(color: ThemeService.colors.primary, size: 25),
+                  .exo2Body(color: ThemeService.colors.primary, size: 25),
               textAlign: TextAlign.center,
             ),
           ],

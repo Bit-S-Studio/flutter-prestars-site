@@ -11,7 +11,7 @@ abstract class IApiService {
 
 class ApiService implements IApiService {
   @override
-  String get baseUrl => 'https://humble-clam-46.hasura.app/v1/graphql';
+  String get baseUrl => 'https://easy-tick-45.hasura.app/v1/graphql';
 
   @override
   String get token => const String.fromEnvironment('api_token');

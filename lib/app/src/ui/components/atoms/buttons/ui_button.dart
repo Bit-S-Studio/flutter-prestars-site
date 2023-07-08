@@ -49,7 +49,7 @@ class UiButton extends StatelessWidget {
         child: DecoratedBox(
           decoration: BoxDecoration(
             color: buttonColor != null ? null : GetButtonColor.call(themeType),
-            borderRadius: BorderRadius.circular(radius ?? 16),
+            borderRadius: BorderRadius.circular(radius ?? 10),
           ),
           child: ElevatedButton(
             onPressed: onPressed,
@@ -63,7 +63,7 @@ class UiButton extends StatelessWidget {
               ButtonStyle(
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(radius ?? 16),
+                    borderRadius: BorderRadius.circular(radius ?? 10),
                     side: const BorderSide(color: Colors.transparent),
                   ),
                 ),
@@ -91,7 +91,7 @@ class UiButton extends StatelessWidget {
                           maxFontSize: fontSize ?? 16,
                           minFontSize: 10,
                           maxLines: 1,
-                          style: ThemeService.styles.oswaldButton(
+                          style: ThemeService.styles.exo2Body(
                               size: fontSize,
                               color: GetButtonTextColor.call(themeType),
                               fontWeight: themeType == ThemeType.tertiary

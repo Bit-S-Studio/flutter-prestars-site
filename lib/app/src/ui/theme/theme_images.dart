@@ -11,4 +11,11 @@ class ThemeImages {
   String get heart => 'images/heart.png';
   String get splashImage => 'images/splash_image.png';
   String get erase => 'images/erase_icon.png';
+
+  String get athleteOne => 'images/athlete-one.png';
+  String get athleteTwo => 'images/athlete-two.jpeg';
+  String get flowOne => 'images/flow-one.png';
+  String get flowTwo => 'images/flow-two.png';
+  String get flowThree => 'images/flow-three.png';
+  String get flowFour => 'images/flow-four.png';
 }

@@ -1,6 +1,6 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../../../prestars_exports.dart';
 
@@ -27,57 +27,51 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return context.isDesktop
-        ? BasePage(
-            maxHeight: context.height * 0.9,
-            maxWidth: context.width * 0.9,
-            body: ValueListenableBuilder<HomeState>(
-                valueListenable: controller,
-                builder: (context, value, child) {
-                  if (value is SuccessHome) {
-                    return const Column(
-                      children: [
-                       
-                        SizedBox(height: 22),
-                      ],
-                    );
-                  } else {
-                    return SizedBox(
-                      height: context.height * 0.8,
-                      child: UiLoading(
-                        color: ThemeService.colors.primary,
+    return BasePage(
+        padding: EdgeInsets.symmetric(horizontal: context.width * 0.08),
+        body: ValueListenableBuilder<HomeState>(
+            valueListenable: controller,
+            builder: (context, value, child) {
+              if (value is SuccessHome) {
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: context.isDesktop ? 80 : 60),
+                    Flexible(
+                      child: AutoSizeText(
+                        'É bom de bola? Nós podemos te ajudar!',
+                        maxFontSize: 60,
+                        minFontSize: 20,
+                        style: ThemeService.styles.exo2Title(),
                       ),
-                    );
-                  }
-                }))
-        : Scaffold(
-            body: Container(
-              height: double.infinity,
-              decoration: BoxDecoration(
-                  gradient: ThemeService.colors.backgroundGradient),
-              child: SingleChildScrollView(
-                child: ValueListenableBuilder<HomeState>(
-                    valueListenable: controller,
-                    builder: (context, value, child) {
-                      if (value is SuccessHome) {
-                        return const Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(height: 34),
-                           
-                            SizedBox(height: 22),
-                          ],
-                        );
-                      } else if (value is ErrorInitHome) {
-                        context.go(ConstantsRoutes.root);
-                        return const UiLoading();
-                      } else {
-                        return const UiLoading();
-                      }
-                    }),
-              ),
-            ),
-          );
+                    ),
+                    SizedBox(height: context.isDesktop ? 80 : 60),
+                    const AthleteOne(),
+                    SizedBox(height: context.isDesktop ? 80 : 60),
+                    const AthleteTwo(),
+                    SizedBox(height: context.isDesktop ? 80 : 60),
+                    Flexible(
+                      child: AutoSizeText(
+                        'Fluxo de captação com o PRESTARS',
+                        maxFontSize: 60,
+                        minFontSize: 32,
+                        style: ThemeService.styles.exo2Title(),
+                      ),
+                    ),
+                    SizedBox(height: context.isDesktop ? 80 : 60),
+                    const FlowWidget()
+                  ],
+                );
+              } else {
+                return SizedBox(
+                  height: context.height * 0.8,
+                  child: UiLoading(
+                    color: ThemeService.colors.primary,
+                  ),
+                );
+              }
+            }));
   }
 }

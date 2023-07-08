@@ -24,8 +24,8 @@ class UiSwitch extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 16.0),
-          child: AutoSizeText(labelText,
-              style: ThemeService.styles.montserratCaption()),
+          child:
+              AutoSizeText(labelText, style: ThemeService.styles.exo2Caption()),
         ),
         const SizedBox(height: 8),
         Row(
@@ -37,7 +37,7 @@ class UiSwitch extends StatelessWidget {
             ReactiveFormConsumer(builder: (context, form, child) {
               final bool isPCD = form.control(formControlName).value;
               return AutoSizeText(isPCD ? onLabel : offLabel,
-                  style: ThemeService.styles.montserratCaption(size: 16));
+                  style: ThemeService.styles.exo2Caption(size: 16));
             }),
           ],
         ),

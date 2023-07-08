@@ -64,8 +64,8 @@ class UiMultiSelectTags extends StatelessWidget {
         AutoSizeText.rich(
           TextSpan(
               text: labelText,
-              style: ThemeService.styles
-                  .montserratCaption(color: _getColorWithValid()),
+              style:
+                  ThemeService.styles.exo2Caption(color: _getColorWithValid()),
               children: [
                 if (isMandatory)
                   TextSpan(text: ' (*)', style: ThemeService.styles.danger())

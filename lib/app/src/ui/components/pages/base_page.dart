@@ -27,46 +27,35 @@ class BasePage extends StatefulWidget {
 
 class _BasePageState extends State<BasePage>
     with AutomaticKeepAliveClientMixin<BasePage> {
+  late ScrollController scrollController;
+
+  @override
+  void initState() {
+    scrollController = ScrollController();
+    super.initState();
+  }
+
   @override
   // ignore: must_call_super
   Widget build(BuildContext context) {
     return WillPopScope(
         onWillPop: () async => true,
         child: Scaffold(
-            body: Container(
-          decoration:
-              BoxDecoration(gradient: ThemeService.colors.backgroundGradient),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              if (widget.topWidget != null)
-                widget.topWidget ?? const SizedBox(),
-              Center(
-                child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                        maxWidth: widget.maxWidth ?? double.infinity,
-                        maxHeight: widget.maxHeight ?? double.infinity),
-                    child: Card(
-                      color: widget.greyBackgroud
-                          ? ThemeService.colors.white
-                          : null,
-                      margin: const EdgeInsets.all(16),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16)),
-                      child: SingleChildScrollView(
-                        child: Padding(
-                          padding: widget.padding ?? const EdgeInsets.all(16),
-                          child: widget.body,
-                        ),
-                      ),
-                    )),
-              ),
-              if (widget.bottomWidget != null)
-                widget.bottomWidget ?? const SizedBox()
-            ],
+          backgroundColor: ThemeService.colors.background,
+          appBar: UiHeader.call(context, scrollController),
+          body: SingleChildScrollView(
+            controller: scrollController,
+            child: Column(
+              children: [
+                Padding(
+                  padding: widget.padding ?? const EdgeInsets.all(16),
+                  child: widget.body,
+                ),
+                const UiFooter(),
+              ],
+            ),
           ),
-        )));
+        ));
   }
 
   @override

@@ -62,8 +62,8 @@ class UiDropdownOverlay {
                                         _tags.isNotEmpty
                                             ? _tags[index].label ?? ''
                                             : 'Adicione itens',
-                                        style: ThemeService.styles
-                                            .montserratCaption(),
+                                        style:
+                                            ThemeService.styles.exo2Caption(),
                                       ),
                                       onTap: () {
                                         onPressedExpanded(_tags[index]);

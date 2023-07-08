@@ -17,7 +17,7 @@ class TitleWithLine extends StatelessWidget {
         children: [
           AutoSizeText(
             title,
-            style: ThemeService.styles.montserratLightTitle(),
+            style: ThemeService.styles.exo2LightTitle(),
             textAlign: TextAlign.left,
           ),
           Divider(color: ThemeService.colors.border)

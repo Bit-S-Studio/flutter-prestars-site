@@ -21,7 +21,7 @@ class GreyCard extends StatelessWidget {
           // maxLines: 2,
           textAlign: TextAlign.center,
           overflow: TextOverflow.visible,
-          style: ThemeService.styles.montserratTitle(
+          style: ThemeService.styles.exo2Title(
               size: 23,
               color: ThemeService.colors.textWhite,
               fontWeight: FontWeight.w400)),

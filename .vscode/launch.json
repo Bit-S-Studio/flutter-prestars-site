@@ -10,7 +10,7 @@
                 "-d",
                 "chrome",
                 "--web-port=4200",
-                "--dart-define=env=dev"
+                "--dart-define=env=dev",
             ]
         },
         {
@@ -47,7 +47,8 @@
                 "lib/main_dev.dart",
                 "--flavor",
                 "dev",
-                "--dart-define=env=dev"
+                "--dart-define=env=dev",
+                "--dart-define=api_token=u8NnktgSQiDllKn0qzXRN7IM8f3XMaH2j2kM03XY8FsVMrBa14da3HdlaGcKIA1v"
             ],
             "flutterMode": "debug"
         }

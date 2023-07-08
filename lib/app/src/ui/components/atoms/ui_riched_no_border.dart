@@ -46,7 +46,7 @@ class UIRichedNoBorder extends StatelessWidget {
         formControlName: formControlName,
         // validationMessages: ValidationMessages().call,
         controller: controller,
-        style: ThemeService.styles.montserratBody(
+        style: ThemeService.styles.exo2Body(
           color: ThemeService.colors.terciary,
         ),
         obscureText: obscureText ?? false,
@@ -93,9 +93,9 @@ class UIRichedNoBorder extends StatelessWidget {
           ),
           labelText: labelText,
           hintText: hintText,
-          labelStyle: ThemeService.styles
-              .montserratBody(color: ThemeService.colors.terciary),
-          floatingLabelStyle: ThemeService.styles.montserratBody(
+          labelStyle:
+              ThemeService.styles.exo2Body(color: ThemeService.colors.terciary),
+          floatingLabelStyle: ThemeService.styles.exo2Body(
             color: ThemeService.colors.secondary,
           ),
         ),

@@ -55,8 +55,8 @@ class UiAvatar extends StatelessWidget {
                                 maxFontSize: 28,
                                 minFontSize: 12,
                                 maxLines: 1,
-                                style: ThemeService.styles.montserratBody(
-                                    color: ThemeService.colors.white),
+                                style: ThemeService.styles
+                                    .exo2Body(color: ThemeService.colors.white),
                               ),
                             )
                           : Center(
@@ -66,7 +66,7 @@ class UiAvatar extends StatelessWidget {
                                 minFontSize: 8,
                                 maxFontSize: 12,
                                 textAlign: TextAlign.center,
-                                style: ThemeService.styles.montserratCaption(
+                                style: ThemeService.styles.exo2Caption(
                                     size: 6,
                                     color: ThemeService.colors.primary),
                               ),

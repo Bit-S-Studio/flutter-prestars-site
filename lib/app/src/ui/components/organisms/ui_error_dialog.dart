@@ -40,7 +40,7 @@ class UiErrorDialog extends StatelessWidget {
               children: [
                 AutoSizeText(
                   error?.message ?? ConstantsStrings.defaultErrorMessage,
-                  style: ThemeService.styles.montserratBody(
+                  style: ThemeService.styles.exo2Body(
                       color: ThemeService.colors.textPrimary,
                       fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
@@ -49,8 +49,8 @@ class UiErrorDialog extends StatelessWidget {
                 if (error?.detail != null)
                   AutoSizeText(
                     error?.detail ?? ConstantsStrings.defaultErrorDetails,
-                    style: ThemeService.styles.montserratBody(
-                        color: ThemeService.colors.textTerciary),
+                    style: ThemeService.styles
+                        .exo2Body(color: ThemeService.colors.textTerciary),
                     textAlign: TextAlign.center,
                   ),
               ],
@@ -68,7 +68,7 @@ class UiErrorDialog extends StatelessWidget {
                   child: AutoSizeText(
                     secondaryButtonText ?? 'secondary_button_text_error',
                     style: ThemeService.styles
-                        .montserratBody(color: ThemeService.colors.textPrimary),
+                        .exo2Body(color: ThemeService.colors.textPrimary),
                   )),
           ],
         ),

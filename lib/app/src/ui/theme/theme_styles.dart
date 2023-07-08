@@ -4,19 +4,18 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../prestars_exports.dart';
 
 class ThemeStyles {
-  TextStyle montserratBody(
-      {Color? color, FontWeight? fontWeight, double? size}) {
-    return GoogleFonts.montserrat(
+  TextStyle exo2Body({Color? color, FontWeight? fontWeight, double? size}) {
+    return GoogleFonts.exo2(
       fontWeight: fontWeight ?? FontWeight.w400,
       fontSize: size ?? 16,
       fontStyle: FontStyle.normal,
-      color: color ?? ThemeService.colors.textPrimary,
+      color: color ?? ThemeService.colors.textSecondary,
     );
   }
 
-  TextStyle montserratBodyItalic(
+  TextStyle exo2BodyItalic(
       {Color? color, FontWeight? fontWeight, double? size}) {
-    return GoogleFonts.montserrat(
+    return GoogleFonts.exo2(
       fontWeight: fontWeight ?? FontWeight.w400,
       fontSize: size ?? 14,
       fontStyle: FontStyle.italic,
@@ -24,27 +23,26 @@ class ThemeStyles {
     );
   }
 
-  TextStyle montserratLightTitle(
+  TextStyle exo2LightTitle(
       {Color? color, FontWeight? fontWeight, double? size}) {
-    return GoogleFonts.montserrat(
-      fontWeight: fontWeight ?? FontWeight.w300,
-      fontSize: size ?? 18,
+    return GoogleFonts.exo2(
+      fontWeight: fontWeight ?? FontWeight.w500,
+      fontSize: size ?? 32,
       color: color ?? ThemeService.colors.textTerciary,
     );
   }
 
-  TextStyle osvaldBody({Color? color, FontWeight? fontWeight, double? size}) {
-    return GoogleFonts.oswald(
-      fontWeight: fontWeight ?? FontWeight.w400,
+  TextStyle exo2LightBody(
+      {Color? color, FontWeight? fontWeight, double? size}) {
+    return GoogleFonts.exo2(
+      fontWeight: fontWeight ?? FontWeight.w500,
       fontSize: size ?? 16,
-      fontStyle: FontStyle.normal,
-      color: color ?? ThemeService.colors.textPrimary,
+      color: color ?? ThemeService.colors.textTerciary,
     );
   }
 
-  TextStyle montserratCaption(
-      {Color? color, double? size, FontWeight? fontWeight}) {
-    return GoogleFonts.montserrat(
+  TextStyle exo2Caption({Color? color, double? size, FontWeight? fontWeight}) {
+    return GoogleFonts.exo2(
       fontWeight: fontWeight ?? FontWeight.w400,
       fontSize: size ?? 18,
       fontStyle: FontStyle.normal,
@@ -52,18 +50,8 @@ class ThemeStyles {
     );
   }
 
-  TextStyle oswaldButton({Color? color, double? size, FontWeight? fontWeight}) {
-    return GoogleFonts.oswald(
-      fontWeight: fontWeight ?? FontWeight.w700,
-      fontSize: size ?? 16,
-      fontStyle: FontStyle.normal,
-      color: color ?? ThemeService.colors.textWhite,
-    );
-  }
-
-  TextStyle montserratSwith(
-      {Color? color, double? size, FontWeight? fontWeight}) {
-    return GoogleFonts.montserrat(
+  TextStyle exo2Swith({Color? color, double? size, FontWeight? fontWeight}) {
+    return GoogleFonts.exo2(
       fontWeight: fontWeight ?? FontWeight.w500,
       fontSize: size ?? 12,
       fontStyle: FontStyle.normal,
@@ -72,7 +60,7 @@ class ThemeStyles {
   }
 
   TextStyle tableTitle({Color? color, double? size, FontWeight? fontWeight}) {
-    return GoogleFonts.montserrat(
+    return GoogleFonts.exo2(
       fontWeight: fontWeight ?? FontWeight.w600,
       fontSize: size ?? 16,
       fontStyle: FontStyle.normal,
@@ -80,8 +68,8 @@ class ThemeStyles {
     );
   }
 
-  TextStyle montserratOverline({Color? color, bool hasUnderline = false}) {
-    return GoogleFonts.montserrat(
+  TextStyle exo2Overline({Color? color, bool hasUnderline = false}) {
+    return GoogleFonts.exo2(
       fontWeight: FontWeight.w400,
       fontSize: 16,
       fontStyle: FontStyle.normal,
@@ -91,42 +79,50 @@ class ThemeStyles {
     );
   }
 
-  TextStyle montserratTitle(
-      {Color? color, FontWeight? fontWeight, double? size}) {
-    return GoogleFonts.montserrat(
+  TextStyle exo2Title({Color? color, FontWeight? fontWeight, double? size}) {
+    return GoogleFonts.exo2(
       fontWeight: fontWeight ?? FontWeight.w400,
-      fontSize: size ?? 18,
-      fontStyle: FontStyle.normal,
-      color: color ?? ThemeService.colors.textTerciary,
-    );
-  }
-
-  TextStyle tableBody({Color? color, FontWeight? fontWeight, double? size}) {
-    return GoogleFonts.montserrat(
-      fontWeight: fontWeight ?? FontWeight.w500,
-      fontSize: size ?? 16,
-      fontStyle: FontStyle.normal,
-      color: color ?? ThemeService.colors.textTerciary,
-    );
-  }
-
-  TextStyle montserratTitlePrimary(
-      {Color? color, FontWeight? fontWeight, double? size}) {
-    return GoogleFonts.montserrat(
-      fontWeight: fontWeight ?? FontWeight.w500,
-      fontSize: size ?? 20,
+      fontSize: size ?? 56,
       fontStyle: FontStyle.normal,
       color: color ?? ThemeService.colors.textPrimary,
     );
   }
 
-  TextStyle montserratTitleSplash(
+  TextStyle exo2Subtitle({Color? color, FontWeight? fontWeight, double? size}) {
+    return GoogleFonts.exo2(
+      fontWeight: fontWeight ?? FontWeight.w400,
+      fontSize: size ?? 36,
+      fontStyle: FontStyle.normal,
+      color: color ?? ThemeService.colors.textPrimary,
+    );
+  }
+
+  TextStyle exo2miniTitle(
       {Color? color, FontWeight? fontWeight, double? size}) {
-    return GoogleFonts.montserrat(
+    return GoogleFonts.exo2(
+      fontWeight: fontWeight ?? FontWeight.bold,
+      fontSize: size ?? 24,
+      fontStyle: FontStyle.normal,
+      color: color ?? ThemeService.colors.textPrimary,
+    );
+  }
+
+  TextStyle tableBody({Color? color, FontWeight? fontWeight, double? size}) {
+    return GoogleFonts.exo2(
       fontWeight: fontWeight ?? FontWeight.w500,
       fontSize: size ?? 16,
       fontStyle: FontStyle.normal,
-      color: color ?? ThemeService.colors.textQuarter,
+      color: color ?? ThemeService.colors.textTerciary,
+    );
+  }
+
+  TextStyle exo2TitlePrimary(
+      {Color? color, FontWeight? fontWeight, double? size}) {
+    return GoogleFonts.exo2(
+      fontWeight: fontWeight ?? FontWeight.w500,
+      fontSize: size ?? 20,
+      fontStyle: FontStyle.normal,
+      color: color ?? ThemeService.colors.textPrimary,
     );
   }
 
@@ -155,22 +151,6 @@ class ThemeStyles {
       fontSize: size ?? 14,
       height: 2,
       color: color ?? ThemeService.colors.danger,
-    );
-  }
-
-  TextStyle export({Color? color, FontWeight? fontWeight, double? size}) {
-    return GoogleFonts.roboto(
-      fontWeight: fontWeight ?? FontWeight.w400,
-      fontSize: size ?? 16,
-      height: 2,
-      color: color ?? ThemeService.colors.textTerciary,
-      shadows: <Shadow>[
-        const Shadow(
-          offset: Offset(1.0, 1.3),
-          blurRadius: 2,
-          color: Color.fromARGB(255, 0, 0, 0),
-        ),
-      ],
     );
   }
 }

@@ -77,7 +77,7 @@ class UiFieldFilled extends StatelessWidget {
                 maxFontSize: 16,
                 minFontSize: 12,
                 overflow: TextOverflow.ellipsis,
-                style: ThemeService.styles.montserratCaption(
+                style: ThemeService.styles.exo2Caption(
                     color:
                         filled ? labelColor ?? ThemeService.colors.white : null,
                     size: filled ? 12 : null)),
@@ -93,7 +93,7 @@ class UiFieldFilled extends StatelessWidget {
               ValidationMessages.value(minLengthLabel: minLengthLabel),
           controller: controller,
           style: ThemeService.styles
-              .montserratCaption(color: ThemeService.colors.textTerciary),
+              .exo2Caption(color: ThemeService.colors.textTerciary),
           obscureText: obscureText ?? false,
           cursorColor: ThemeService.colors.textPrimary,
           cursorWidth: 1,
@@ -104,7 +104,7 @@ class UiFieldFilled extends StatelessWidget {
             contentPadding: EdgeInsets.symmetric(
                 vertical: padding ?? 15.0, horizontal: padding ?? 16.0),
             helperStyle: ThemeService.styles
-                .montserratCaption(color: ThemeService.colors.textTerciary),
+                .exo2Caption(color: ThemeService.colors.textTerciary),
             errorStyle: const TextStyle(height: 1),
             prefixIcon: prefix,
             suffixIcon: suffix,
@@ -141,9 +141,9 @@ class UiFieldFilled extends StatelessWidget {
             labelText: enableLabel2 ? null : labelText,
             hintText: hintText,
             labelStyle: ThemeService.styles
-                .montserratCaption(color: ThemeService.colors.textTerciary),
+                .exo2Caption(color: ThemeService.colors.textTerciary),
             floatingLabelStyle: ThemeService.styles
-                .montserratCaption(color: ThemeService.colors.textTerciary),
+                .exo2Caption(color: ThemeService.colors.textTerciary),
           ),
           textInputAction: GetTextInputAction.call(type),
           inputFormatters: GetTextInputFormatters.call(type),

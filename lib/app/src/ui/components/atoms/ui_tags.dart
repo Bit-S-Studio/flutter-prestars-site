@@ -30,7 +30,7 @@ class UiTags extends StatelessWidget {
                             backgroundColor: ThemeService.colors.interestItem,
                             label: AutoSizeText(
                               selectedList[index].label ?? '',
-                              style: ThemeService.styles.montserratBody(),
+                              style: ThemeService.styles.exo2Body(),
                               maxFontSize: 16,
                               minFontSize: 10,
                               maxLines: 2,

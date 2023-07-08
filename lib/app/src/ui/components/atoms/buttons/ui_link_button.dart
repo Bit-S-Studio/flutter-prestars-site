@@ -16,7 +16,7 @@ class UiLinkButton extends StatelessWidget {
       child: Text(
         text,
         style: textStyle ??
-            ThemeService.styles.montserratOverline(
+            ThemeService.styles.exo2Overline(
                 hasUnderline: true, color: ThemeService.colors.textTerciary),
       ),
     );

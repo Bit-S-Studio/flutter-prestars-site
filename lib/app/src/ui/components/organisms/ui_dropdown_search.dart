@@ -83,7 +83,7 @@ class UiDropdownField<T> extends StatelessWidget {
           child: AutoSizeText.rich(
             TextSpan(
                 text: labelText ?? '',
-                style: ThemeService.styles.montserratCaption(
+                style: ThemeService.styles.exo2Caption(
                     fontWeight: FontWeight.w500,
                     color: filled ? ThemeService.colors.white : null,
                     size: filled ? 12 : null),
@@ -129,7 +129,7 @@ class UiDropdownField<T> extends StatelessWidget {
               validationMessages:
                   ValidationMessages.value(formControlName: labelText),
               textFieldConfiguration: TextFieldConfiguration(
-                style: ThemeService.styles.montserratCaption(),
+                style: ThemeService.styles.exo2Caption(),
                 // textAlignVertical: TextAlignVertical.center,
                 cursorColor: ThemeService.colors.textPrimary,
                 cursorWidth: 1,
@@ -139,7 +139,7 @@ class UiDropdownField<T> extends StatelessWidget {
                     isDense: true,
                     contentPadding: EdgeInsets.symmetric(
                         vertical: 13.0, horizontal: filled ? 16 : 0),
-                    helperStyle: ThemeService.styles.montserratCaption(),
+                    helperStyle: ThemeService.styles.exo2Caption(),
                     errorStyle:
                         TextStyle(height: 1, color: ThemeService.colors.danger),
                     focusedBorder: UnderlineInputBorder(
@@ -152,8 +152,8 @@ class UiDropdownField<T> extends StatelessWidget {
                         borderRadius: BorderRadius.circular(filled ? 10 : 0)),
                     disabledBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(filled ? 10 : 0)),
-                    labelStyle: ThemeService.styles.montserratCaption(),
-                    floatingLabelStyle: ThemeService.styles.montserratCaption(),
+                    labelStyle: ThemeService.styles.exo2Caption(),
+                    floatingLabelStyle: ThemeService.styles.exo2Caption(),
                     suffixIcon: RotatedBox(
                         quarterTurns: 1,
                         child: Icon(Icons.arrow_forward_ios_outlined,

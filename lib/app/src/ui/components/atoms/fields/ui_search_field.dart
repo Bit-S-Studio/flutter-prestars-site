@@ -22,7 +22,7 @@ class UiSearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return ReactiveTextField(
       formControlName: formControlName,
-      style: ThemeService.styles.montserratBody(
+      style: ThemeService.styles.exo2Body(
         color: ThemeService.colors.terciary,
       ),
       cursorColor: ThemeService.colors.textPrimary,
@@ -31,7 +31,7 @@ class UiSearchField extends StatelessWidget {
         isDense: true,
         contentPadding:
             const EdgeInsets.symmetric(vertical: 12.0, horizontal: 12.0),
-        helperStyle: ThemeService.styles.montserratBody(),
+        helperStyle: ThemeService.styles.exo2Body(),
         errorStyle: const TextStyle(height: 0),
         prefixIcon: const Padding(
           padding: EdgeInsets.all(12.0),
@@ -56,7 +56,7 @@ class UiSearchField extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(borderRadius ?? 16)),
         hintText: hint ?? 'search',
-        hintStyle: ThemeService.styles.montserratBody(
+        hintStyle: ThemeService.styles.exo2Body(
           color: ThemeService.colors.terciary,
         ),
       ),

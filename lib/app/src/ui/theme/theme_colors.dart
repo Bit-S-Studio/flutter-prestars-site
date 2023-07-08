@@ -4,20 +4,20 @@ class ThemeColors {
   Color get primary => const Color(0xFF17930D);
   Color get secondary => const Color(0xFF9dc59b);
   Color get terciary => const Color(0xFFDEDFE0);
-  Color get white => const Color(0xFFEEEDEE);
+  Color get white => const Color(0xFFFFFFFF);
   Color get iconPrimary => const Color(0xFF0E3613);
-  Color get iconSecondary => const Color(0xFF64C65C);
+  Color get iconSecondary => const Color(0xFF28873D);
   Color get selectedItem => const Color(0xFF1B6425);
   Color get unselectedItem => const Color(0xFF17930D);
-  Color get buttonPrimary => const Color(0xFF0E3613);
+  Color get buttonPrimary => const Color(0xFF17930D);
   Color get border => const Color(0xFF717F7F);
   Color get textPrimary => const Color(0xFF0E3613);
-  Color get textSecondary => const Color(0xFFCDCDCD);
-  Color get textTerciary => const Color(0xFF717F7F);
+  Color get textSecondary => const Color(0xFF3DAC4D);
+  Color get textTerciary => const Color(0xFFFFFFFf);
   Color get textPagination => const Color(0xFF535455);
   Color get textWhite => const Color(0xFFEEEDEE);
   Color get danger => const Color(0xFF972006);
-  Color get background => const Color(0xFF0E3613);
+  Color get background => const Color(0xFFF7FCF7);
   Color get textQuarter => const Color(0xFF1B6425);
   Color get textTitle => const Color(0xFF494A4A);
   Color get crud => const Color(0xFFDEDFE0);
@@ -29,9 +29,4 @@ class ThemeColors {
         offset: Offset(0, 5),
         blurRadius: 7,
       );
-
-  LinearGradient get backgroundGradient => const LinearGradient(colors: [
-        Color(0xFF0E3613),
-        Color(0xFF1B6425),
-      ], begin: Alignment.centerLeft, end: Alignment.centerRight);
 }

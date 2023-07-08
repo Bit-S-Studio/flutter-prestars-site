@@ -43,7 +43,7 @@ class UiSegmentedPartButton<T> extends StatelessWidget {
           child: Center(
               child: AutoSizeText(
             label,
-            style: ThemeService.styles.montserratSwith(),
+            style: ThemeService.styles.exo2Swith(),
             maxFontSize: 12,
             maxLines: 1,
             minFontSize: 8,

@@ -73,7 +73,7 @@ class UiField extends StatelessWidget {
             child: AutoSizeText.rich(
               TextSpan(
                   text: labelText ?? '',
-                  style: ThemeService.styles.montserratCaption(
+                  style: ThemeService.styles.exo2Caption(
                       fontWeight: FontWeight.w500,
                       color: filled ? ThemeService.colors.white : null,
                       size: filled ? 12 : null),
@@ -105,7 +105,7 @@ class UiField extends StatelessWidget {
                       : null,
                   formControlName: labelText),
               controller: controller,
-              style: ThemeService.styles.montserratCaption(),
+              style: ThemeService.styles.exo2Caption(),
               obscureText: obscureText ?? false,
               cursorColor: ThemeService.colors.textPrimary,
               cursorWidth: 1,
@@ -115,7 +115,7 @@ class UiField extends StatelessWidget {
                 isDense: true,
                 contentPadding: EdgeInsets.symmetric(
                     vertical: filled ? 14 : 14.0, horizontal: filled ? 16 : 0),
-                helperStyle: ThemeService.styles.montserratCaption(),
+                helperStyle: ThemeService.styles.exo2Caption(),
                 errorStyle:
                     TextStyle(height: 1, color: ThemeService.colors.danger),
                 prefixIcon: prefix,
@@ -140,8 +140,8 @@ class UiField extends StatelessWidget {
                     borderRadius: BorderRadius.circular(filled ? 10 : 0)),
                 labelText: enableLabel2 ? null : labelText,
                 hintText: hintText,
-                labelStyle: ThemeService.styles.montserratCaption(),
-                floatingLabelStyle: ThemeService.styles.montserratCaption(),
+                labelStyle: ThemeService.styles.exo2Caption(),
+                floatingLabelStyle: ThemeService.styles.exo2Caption(),
               ),
               textInputAction: GetTextInputAction.call(type),
               inputFormatters: GetTextInputFormatters.call(type),

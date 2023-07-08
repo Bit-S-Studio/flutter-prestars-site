@@ -68,7 +68,7 @@ class UiCheck extends StatelessWidget {
               TextSpan(
                   text: labelText,
                   style: ThemeService.styles
-                      .montserratCaption(color: textColor, size: textSize),
+                      .exo2Caption(color: textColor, size: textSize),
                   children: [
                     if (isMandatory)
                       TextSpan(

@@ -45,9 +45,9 @@ class UiMiniButton extends StatelessWidget {
                       style: style ??
                           (height != null
                               ? ThemeService.styles
-                                  .montserratBody(color: Colors.white)
+                                  .exo2Body(color: Colors.white)
                               : ThemeService.styles
-                                  .montserratBody(color: Colors.white)),
+                                  .exo2Body(color: Colors.white)),
                     ),
                     const SizedBox(width: 8),
                     icon!,
@@ -60,10 +60,10 @@ class UiMiniButton extends StatelessWidget {
                       title,
                       style: style ??
                           (height != null
-                              ? ThemeService.styles.montserratBody(
+                              ? ThemeService.styles.exo2Body(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700)
-                              : ThemeService.styles.montserratBody(
+                              : ThemeService.styles.exo2Body(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w700)),
                     ),

@@ -10,5 +10,6 @@ class HomeController extends ValueNotifier<HomeState> {
 
   void init() async {
     value = LoadingHome();
+    value = SuccessHome();
   }
 }

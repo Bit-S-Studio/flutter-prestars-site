@@ -44,7 +44,7 @@ class UIRiched extends StatelessWidget {
         formControlName: formControlName,
         // validationMessages: ValidationMessages().call,
         controller: controller,
-        style: ThemeService.styles.montserratBody(
+        style: ThemeService.styles.exo2Body(
           color: ThemeService.colors.terciary,
         ),
         obscureText: obscureText ?? false,
@@ -66,9 +66,9 @@ class UIRiched extends StatelessWidget {
           errorBorder: InputBorder.none,
           disabledBorder: InputBorder.none,
           hintText: hintText,
-          hintStyle: ThemeService.styles
-              .montserratBody(color: ThemeService.colors.terciary),
-          floatingLabelStyle: ThemeService.styles.montserratBody(
+          hintStyle:
+              ThemeService.styles.exo2Body(color: ThemeService.colors.terciary),
+          floatingLabelStyle: ThemeService.styles.exo2Body(
             color: ThemeService.colors.secondary,
           ),
         ),

@@ -14,7 +14,7 @@ class UiDropDownItem<T> {
                 Flexible(
                   child: AutoSizeText(
                     text,
-                    style: ThemeService.styles.montserratCaption(),
+                    style: ThemeService.styles.exo2Caption(),
                     maxFontSize: 16,
                     maxLines: 1,
                     minFontSize: 10,

@@ -19,3 +19,4 @@ export 'ui_tags.dart';
 export 'ui_dropdown_overlay.dart';
 export 'ui_check.dart';
 export 'ui_simple_rich_text.dart';
+export 'ui_name.dart';

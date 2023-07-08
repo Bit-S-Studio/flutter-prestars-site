@@ -22,11 +22,11 @@ class UiRichButton extends StatelessWidget {
       child: AutoSizeText.rich(TextSpan(
           text: text,
           style: ThemeService.styles
-              .osvaldBody(color: ThemeService.colors.primary),
+              .exo2Body(color: ThemeService.colors.primary),
           children: [
             TextSpan(
               text: richText,
-              style: ThemeService.styles.osvaldBody(),
+              style: ThemeService.styles.exo2Body(),
             )
           ])),
     );
