@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       routeInformationProvider: routes.routeInformationProvider,
       routerDelegate: routes.routerDelegate,
       debugShowCheckedModeBanner: false,
-      title: 'Banco de currículos Ideas',
+      title: 'PRESTARS - conectando clubes e estrelas',
       builder: Asuka.builder,
       theme: ThemeData(
           scrollbarTheme: ScrollbarThemeData(

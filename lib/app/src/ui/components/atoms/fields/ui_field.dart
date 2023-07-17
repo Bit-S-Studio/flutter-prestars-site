@@ -32,6 +32,7 @@ class UiField extends StatelessWidget {
     this.minLenghtMessage,
     this.filled = false,
     this.isMandatory = false,
+    this.isWhite = false,
   }) : super(key: key);
 
   final String? labelText;
@@ -59,9 +60,13 @@ class UiField extends StatelessWidget {
   final String? minLenghtMessage;
   final bool filled;
   final bool isMandatory;
+  final bool isWhite;
 
   @override
   Widget build(BuildContext context) {
+    final defaultColor = isWhite
+        ? ThemeService.colors.textTerciary
+        : ThemeService.colors.textSecondary;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -75,7 +80,7 @@ class UiField extends StatelessWidget {
                   text: labelText ?? '',
                   style: ThemeService.styles.exo2Caption(
                       fontWeight: FontWeight.w500,
-                      color: filled ? ThemeService.colors.white : null,
+                      color: defaultColor,
                       size: filled ? 12 : null),
                   children: [
                     if (isMandatory)
@@ -105,9 +110,9 @@ class UiField extends StatelessWidget {
                       : null,
                   formControlName: labelText),
               controller: controller,
-              style: ThemeService.styles.exo2Caption(),
+              style: ThemeService.styles.exo2Caption(color: defaultColor),
               obscureText: obscureText ?? false,
-              cursorColor: ThemeService.colors.textPrimary,
+              cursorColor: defaultColor,
               cursorWidth: 1,
               decoration: InputDecoration(
                 filled: filled,
@@ -115,22 +120,20 @@ class UiField extends StatelessWidget {
                 isDense: true,
                 contentPadding: EdgeInsets.symmetric(
                     vertical: filled ? 14 : 14.0, horizontal: filled ? 16 : 0),
-                helperStyle: ThemeService.styles.exo2Caption(),
+                helperStyle:
+                    ThemeService.styles.exo2Caption(color: defaultColor),
                 errorStyle:
                     TextStyle(height: 1, color: ThemeService.colors.danger),
                 prefixIcon: prefix,
                 suffixIcon: suffix,
                 focusedBorder: UnderlineInputBorder(
-                    borderSide:
-                        BorderSide(color: ThemeService.colors.iconPrimary),
+                    borderSide: BorderSide(color: defaultColor),
                     borderRadius: BorderRadius.circular(filled ? 10 : 0)),
                 focusedErrorBorder: UnderlineInputBorder(
-                    borderSide:
-                        BorderSide(color: ThemeService.colors.iconPrimary),
+                    borderSide: BorderSide(color: defaultColor),
                     borderRadius: BorderRadius.circular(filled ? 10 : 0)),
                 enabledBorder: UnderlineInputBorder(
-                    borderSide:
-                        BorderSide(color: ThemeService.colors.iconPrimary),
+                    borderSide: BorderSide(color: defaultColor),
                     borderRadius: BorderRadius.circular(filled ? 10 : 0)),
                 errorBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: ThemeService.colors.danger),
@@ -140,8 +143,10 @@ class UiField extends StatelessWidget {
                     borderRadius: BorderRadius.circular(filled ? 10 : 0)),
                 labelText: enableLabel2 ? null : labelText,
                 hintText: hintText,
-                labelStyle: ThemeService.styles.exo2Caption(),
-                floatingLabelStyle: ThemeService.styles.exo2Caption(),
+                labelStyle:
+                    ThemeService.styles.exo2Caption(color: defaultColor),
+                floatingLabelStyle:
+                    ThemeService.styles.exo2Caption(color: defaultColor),
               ),
               textInputAction: GetTextInputAction.call(type),
               inputFormatters: GetTextInputFormatters.call(type),

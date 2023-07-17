@@ -46,7 +46,7 @@ class ThemeStyles {
       fontWeight: fontWeight ?? FontWeight.w400,
       fontSize: size ?? 18,
       fontStyle: FontStyle.normal,
-      color: color ?? ThemeService.colors.textPrimary,
+      color: color ?? ThemeService.colors.textSecondary,
     );
   }
 
@@ -81,7 +81,7 @@ class ThemeStyles {
 
   TextStyle exo2Title({Color? color, FontWeight? fontWeight, double? size}) {
     return GoogleFonts.exo2(
-      fontWeight: fontWeight ?? FontWeight.w400,
+      fontWeight: fontWeight ?? FontWeight.w600,
       fontSize: size ?? 56,
       fontStyle: FontStyle.normal,
       color: color ?? ThemeService.colors.textPrimary,
@@ -123,6 +123,15 @@ class ThemeStyles {
       fontSize: size ?? 20,
       fontStyle: FontStyle.normal,
       color: color ?? ThemeService.colors.textPrimary,
+    );
+  }
+
+  TextStyle exo2Emphasis({Color? color, FontWeight? fontWeight, double? size}) {
+    return GoogleFonts.exo2(
+      fontWeight: fontWeight ?? FontWeight.w600,
+      fontSize: size ?? 56,
+      fontStyle: FontStyle.normal,
+      color: color ?? ThemeService.colors.textSecondary,
     );
   }
 

@@ -1,11 +1,10 @@
 class ConstantsLabels {
-  static const name = 'Nome e sobrenome*';
+  static const name = 'Nome e sobrenome';
   static const simpleName = 'Nome';
-  static const cpf = 'CPF*';
-  static const cnpj = 'CNPJ*';
-  static const email = 'E-mail*';
+  static const cnpj = 'CNPJ';
+  static const email = 'E-mail';
   static const password = 'Senha';
-  static const confirmPassword = 'Confirmar senha*';
+  static const confirmPassword = 'Confirmar senha';
   static const token = 'Token de acesso';
   static const code = 'Código de acesso';
   static const stateRegistration = 'Inscrição estadual';
@@ -18,15 +17,9 @@ class ConstantsLabels {
   static const disable = 'Cancelar inscrição';
   static const receivedToken = 'Recebi o token!';
   static const registration = 'Cadastrar';
-  static const phone = 'Telefone*';
-  static const type = 'Tipo social*';
-  static const cep = 'CEP*';
-  static const city = 'Municipio*';
-  static const uf = 'UF*';
-  static const street = 'Endereço*';
-  static const number = 'Numero*';
-  static const complement = 'Complemento';
-  static const neighborhood = 'Bairro*';
+  static const phone = 'Telefone';
+  static const city = 'Cidade';
+  static const state = 'Estado';
   static const save = 'Criar cadastro';
   static const advance = 'Avançar';
   static const cancelRegistration = 'Excluir cadastro';
@@ -44,14 +37,12 @@ class ConstantsLabels {
   static const minimalSchooling = 'Escolaridade mínima';
   static const office = 'Cargo de interesse';
   static const select = 'Selecione uma das opções abaixo';
-  static const selectOptions = 'Selecione as opções abaixo';
+  static const selectOptions = 'Selecione até 3 das opções abaixo';
   static const emptyInterests = 'Não há cargos';
   static const removeInterest = 'Remover esse cargo';
   static const addInterest = 'Adicionar outro cargo';
   static const addInterests = 'Adicionar nova área de interesse';
   static const wantRegistrationFirst = 'Ainda não tem uma conta? ';
-  static const interestsText = 'Área(s) de interesse:';
-  static const interestsTextField = 'Área(s) de interesse';
   static const isOfAge = 'Declaro ser maior de 18 anos.';
   static const medicalReport = 'Laudo PCD';
   static const medicalReportWithoutPCD = 'Laudo Médico';
@@ -84,4 +75,13 @@ class ConstantsLabels {
   static const keepRegistration = 'Manter cadastro';
   static const enable = 'Manter inscrição';
   static const registrationMandatory = '(*) campo obrigatório';
+  static const birth = 'Data de nascimento';
+  static const height = 'Altura';
+  static const heightOfFather = 'Altura do pai';
+  static const weight = 'Peso';
+  static const positionsTextField = 'Posições no campo';
+  static const characteristicsTextField = 'Caracteristicas';
+  static const favoriteLab = 'Perna Favorita';
+  static const favoriteLabRight = 'Direita';
+  static const favoriteLabLeft = 'Esquerda';
 }

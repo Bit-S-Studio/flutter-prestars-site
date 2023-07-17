@@ -21,17 +21,14 @@ class AthleteTwo extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                const Flexible(
+                    child: UiEmphasisText(
+                        textStart: 'Grandes ',
+                        textEmphasis: 'estrelas ',
+                        textFinish: 'jogam em equipe')),
                 Flexible(
                   child: AutoSizeText(
-                    'Grandes estrelas jogam em equipe',
-                    maxFontSize: 48,
-                    minFontSize: 24,
-                    style: ThemeService.styles.exo2Title(),
-                  ),
-                ),
-                Flexible(
-                  child: AutoSizeText(
-                    'Se você é aquele professor que acredita no brilho de seus alunos, os indeque para chegar lá',
+                    'Se você é um professor que acredita no potencial brilhante de seus alunos, oriente-os em direção ao sucesso',
                     maxFontSize: 30,
                     minFontSize: 18,
                     style: ThemeService.styles.exo2Subtitle(),
@@ -48,7 +45,7 @@ class AthleteTwo extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16),
                     image: DecorationImage(
                         image: AssetImage(ThemeService.images.athleteTwo),
-                        fit: BoxFit.contain)),
+                        fit: BoxFit.cover)),
               )),
         ],
       ),

@@ -38,6 +38,18 @@ class GetTextInputFormatters {
           FilteringTextInputFormatter.digitsOnly,
           HoraInputFormatter(),
         ];
+      case TextfieldType.height:
+        return [
+          // obrigatório
+          FilteringTextInputFormatter.digitsOnly,
+          AlturaInputFormatter(),
+        ];
+      case TextfieldType.weight:
+        return [
+          // obrigatório
+          FilteringTextInputFormatter.digitsOnly,
+          PesoInputFormatter(),
+        ];
       case TextfieldType.name:
         return [
           // obrigatório

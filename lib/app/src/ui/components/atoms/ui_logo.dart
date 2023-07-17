@@ -10,18 +10,13 @@ class UiLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(context.height * 0.03),
-      child: Center(
-        child: SizedBox(
-          height: height ?? 60,
-          child: Image.asset(
-            ThemeService.images.logo,
-            // scale: scale ?? 1,
-            filterQuality: FilterQuality.high,
-            fit: BoxFit.cover,
-          ),
-        ),
+    return SizedBox(
+      height: height ?? 50,
+      width: 400,
+      child: Image.asset(
+        ThemeService.images.completeLogo,
+        filterQuality: FilterQuality.high,
+        fit: BoxFit.contain,
       ),
     );
   }

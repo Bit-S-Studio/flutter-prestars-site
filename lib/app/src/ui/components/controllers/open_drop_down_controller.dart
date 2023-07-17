@@ -13,8 +13,8 @@ class OpenDropDownController extends ValueNotifier<bool> {
 
   void toggleDropdown(BuildContext context, bool hasFocus,
       {required FormGroup formGroup,
-      required Function(TagModel tag) onPressedExpanded,
-      required List<TagModel> tags,
+      required Function(String tag) onPressedExpanded,
+      required List<String> tags,
       required String searchTagsFormControlName,
       required String selectedTagsFormControlName,
       required String searchedTagsFormControlName}) async {

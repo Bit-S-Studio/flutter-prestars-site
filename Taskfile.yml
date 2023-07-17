@@ -85,16 +85,10 @@ tasks:
     # deps: [build:utils-image, install:dependencies]
     cmds:
       - >
-        flutter build web -t lib/main_{{.ENVIRONEMNT}}.dart --release
+        flutter build web -t lib/main_{{.ENVIRONEMNT}}.dart --release --web-browser-flag --enable-features=SharedArrayBuffer
 
   publish:artifact:
     desc: "Roda o comando de build da aplicação (Usado pela esteira)"
-    deps: [build:utils-image]
     cmds:
       - >
-        docker-compose run \
-          {{.DOCKER_IMAGE_BUILDER}} sh -c "\
-          cd build && \
-          zip -r ../web.zip web && \
-          cd .. && \
-          scp -P 22222 web.zip bancocurriculos@172.104.8.237:/home/bancocurriculos"
+        firebase deploy --only hosting:prestars

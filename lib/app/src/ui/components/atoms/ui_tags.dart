@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import '../../../../../prestars_exports.dart';
 
 class UiTags extends StatelessWidget {
-  final List<TagModel> selectedList;
+  final List<String> selectedList;
   final bool isEnabled;
-  final Function(TagModel tag) onDeleteExpanded;
+  final Function(String tag) onDeleteExpanded;
   const UiTags(
       {super.key,
       required this.selectedList,
@@ -27,15 +27,17 @@ class UiTags extends StatelessWidget {
                     children: List.generate(
                         selectedList.length,
                         (index) => InputChip(
-                            backgroundColor: ThemeService.colors.interestItem,
+                            backgroundColor: ThemeService.colors.primary,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(4)),
                             label: AutoSizeText(
-                              selectedList[index].label ?? '',
-                              style: ThemeService.styles.exo2Body(),
+                              selectedList[index],
+                              style: ThemeService.styles.exo2LightBody(),
                               maxFontSize: 16,
                               minFontSize: 10,
                               maxLines: 2,
                             ),
-                            deleteIconColor: ThemeService.colors.iconPrimary,
+                            deleteIconColor: ThemeService.colors.white,
                             onDeleted: isEnabled
                                 ? () {
                                     onDeleteExpanded.call(selectedList[index]);

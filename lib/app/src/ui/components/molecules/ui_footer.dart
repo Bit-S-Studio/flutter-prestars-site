@@ -74,27 +74,33 @@ class UiFooter extends StatelessWidget {
                 children: [
                   AutoSizeText('Siga-nos nas redes sociais',
                       style: ThemeService.styles.exo2LightTitle()),
-                  Row(
-                    children: [
-                      ThemeService.icons.facebookIcon,
-                      AutoSizeText('/prestars',
-                          style: ThemeService.styles.exo2LightBody()),
-                    ],
-                  ),
+                  // Row(
+                  //   children: [
+                  //     ThemeService.icons.facebookIcon,
+                  //     AutoSizeText('/prestars',
+                  //         style: ThemeService.styles.exo2LightBody()),
+                  //   ],
+                  // ),
                   Row(
                     children: [
                       ThemeService.icons.instagramIcon,
-                      AutoSizeText('/prestars_',
-                          style: ThemeService.styles.exo2LightBody()),
+                      Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () => OpenInstagram.call(),
+                          child: AutoSizeText('/prestars_',
+                              style: ThemeService.styles.exo2LightBody()),
+                        ),
+                      ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      ThemeService.icons.linkedinIcon,
-                      AutoSizeText('/prestars',
-                          style: ThemeService.styles.exo2LightBody()),
-                    ],
-                  ),
+                  // Row(
+                  //   children: [
+                  //     ThemeService.icons.linkedinIcon,
+                  //     AutoSizeText('/prestars',
+                  //         style: ThemeService.styles.exo2LightBody()),
+                  //   ],
+                  // ),
                 ],
               ),
             ),

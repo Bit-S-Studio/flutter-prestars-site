@@ -22,7 +22,7 @@ class AthleteOne extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16),
                     image: DecorationImage(
                         image: AssetImage(ThemeService.images.athleteOne),
-                        fit: BoxFit.contain)),
+                        fit: BoxFit.cover)),
               )),
           const Spacer(flex: 1),
           Flexible(
@@ -31,14 +31,11 @@ class AthleteOne extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Flexible(
-                  child: AutoSizeText(
-                    'Mostre a estrela que brilha em você',
-                    maxFontSize: 48,
-                    minFontSize: 24,
-                    style: ThemeService.styles.exo2Title(),
-                  ),
-                ),
+                const Flexible(
+                    child: UiEmphasisText(
+                        textStart: 'Mostre a ',
+                        textEmphasis: 'estrela ',
+                        textFinish: 'que brilha em você!')),
                 Flexible(
                   child: AutoSizeText(
                     'Cadastre-se em nossa plataforma, mostre suas atuações e o quanto você pode brilhar em uma equipe de grande porte',

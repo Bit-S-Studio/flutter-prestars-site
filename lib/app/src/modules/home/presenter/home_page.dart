@@ -36,21 +36,21 @@ class _HomePageState extends State<HomePage> {
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(height: context.isDesktop ? 80 : 60),
-                    Flexible(
-                      child: AutoSizeText(
-                        'É bom de bola? Nós podemos te ajudar!',
-                        maxFontSize: 60,
-                        minFontSize: 20,
-                        style: ThemeService.styles.exo2Title(),
-                      ),
+                    const Flexible(
+                      child: UiEmphasisText(
+                          textStart: 'É bom de ',
+                          textEmphasis: 'bola',
+                          textFinish: '? Nós podemos te ajudar!'),
                     ),
                     SizedBox(height: context.isDesktop ? 80 : 60),
                     const AthleteOne(),
                     SizedBox(height: context.isDesktop ? 80 : 60),
                     const AthleteTwo(),
+                    SizedBox(height: context.isDesktop ? 80 : 60),
+                    const AthleteThree(),
                     SizedBox(height: context.isDesktop ? 80 : 60),
                     Flexible(
                       child: AutoSizeText(
@@ -61,7 +61,10 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     SizedBox(height: context.isDesktop ? 80 : 60),
-                    const FlowWidget()
+                    const FlowWidget(),
+                    SizedBox(height: context.isDesktop ? 80 : 60),
+                    const AthleteForms(),
+                    SizedBox(height: context.isDesktop ? 80 : 60),
                   ],
                 );
               } else {

@@ -1,25 +1,19 @@
+import 'dart:async';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../../../prestars_exports.dart';
 
-class TagModel {
-  String? id;
-  String? label;
-  dynamic value;
-
-  TagModel({this.id, this.label, this.value});
-}
-
 class UiMultiSelectTags extends StatelessWidget {
-  final List<TagModel> tagList;
+  final List<String> tagList;
   final String labelText;
-  final Function(TagModel tag) onDeleteExpanded;
-  final Function(TagModel tag) onPressedExpanded;
+  final Function(String tag) onDeleteExpanded;
+  final Function(String tag) onPressedExpanded;
   final bool isValid;
   final String? hint;
-  final List<TagModel> tagListSelected;
+  final List<String> tagListSelected;
   final bool isEnabled;
   final Map<String, String> Function(dynamic)? validationMessages;
   final String? formControlName;
@@ -29,8 +23,9 @@ class UiMultiSelectTags extends StatelessWidget {
   final Key? keyOnDeleteExpanded;
   final String searchedTagsFormControlName;
   final String searchTagsFormControlName;
-  final Function(String) searchFunction;
+  final Future<List<String>> Function(String value) searchFunction;
   final bool isMandatory;
+  final Function(String) setValue;
 
   const UiMultiSelectTags(
       {Key? key,
@@ -41,7 +36,7 @@ class UiMultiSelectTags extends StatelessWidget {
       this.isValid = true,
       this.isEnabled = false,
       this.hint,
-      this.tagListSelected = const <TagModel>[],
+      this.tagListSelected = const [],
       this.validationMessages,
       this.formControlName,
       this.showErrors = true,
@@ -51,11 +46,13 @@ class UiMultiSelectTags extends StatelessWidget {
       required this.searchedTagsFormControlName,
       required this.searchTagsFormControlName,
       required this.searchFunction,
+      required this.setValue,
       this.isMandatory = false})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Timer? timer;
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -71,17 +68,42 @@ class UiMultiSelectTags extends StatelessWidget {
                   TextSpan(text: ' (*)', style: ThemeService.styles.danger())
               ]),
         ),
-        UiDropdownTextField(
-            formGroup: formGroup,
-            tags: formGroup.control('ConstantsForms.interestsSearched').value
-                as List<TagModel>,
-            onPressedExpanded: onPressedExpanded,
-            hint: hint ?? '',
-            selectedTagsFormControlName: formControlName ?? '',
-            searchedTagsFormControlName: searchedTagsFormControlName,
-            searchTagsFormControlName: searchTagsFormControlName,
-            iconColor: _getColorWithValid() ?? ThemeService.colors.primary,
-            searchFunction: searchFunction),
+        UiDropdownField<String>(
+          formControlName: searchTagsFormControlName,
+          stringify: (value) {
+            return value;
+          },
+          suggestionsCallback: (pattern) async {
+            final completer = Completer<List<String>>();
+            timer?.cancel();
+            timer = Timer(const Duration(milliseconds: 500), () async {
+              final tags = await searchFunction(pattern);
+              completer.complete(tags);
+            });
+            return completer.future;
+          },
+          hintText: hint ?? '',
+          suggestionWidget: (value) =>
+              AutoSizeText(value, style: ThemeService.styles.exo2Caption()),
+          labelText: labelText,
+          type: TextfieldType.text,
+          onSuggestionSelected: (value) => onPressedExpanded(value),
+          viewDataTypeFromTextEditingValue: (value) {
+            setValue(value);
+            return value;
+          },
+        ),
+        // UiDropdownTextField(
+        //     formGroup: formGroup,
+        //     tags: formGroup.control(searchedTagsFormControlName).value
+        //         as List<String>,
+        //     onPressedExpanded: onPressedExpanded,
+        //     hint: hint ?? '',
+        //     selectedTagsFormControlName: formControlName ?? '',
+        //     searchedTagsFormControlName: searchedTagsFormControlName,
+        //     searchTagsFormControlName: searchTagsFormControlName,
+        //     iconColor: _getColorWithValid() ?? ThemeService.colors.primary,
+        //     searchFunction: searchFunction),
         UiTags(
             selectedList: tagListSelected,
             isEnabled: isEnabled,

@@ -15,5 +15,7 @@ enum TextfieldType {
   addressNumber,
   addressCep,
   chat,
-  name
+  name,
+  height,
+  weight
 }

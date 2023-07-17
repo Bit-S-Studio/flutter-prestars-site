@@ -25,6 +25,12 @@ class GetTextInputType {
       case TextfieldType.number:
         return TextInputType.number;
 
+      case TextfieldType.height:
+        return TextInputType.number;
+
+      case TextfieldType.weight:
+        return TextInputType.number;
+
       case TextfieldType.addressNumber:
         return TextInputType.number;
 

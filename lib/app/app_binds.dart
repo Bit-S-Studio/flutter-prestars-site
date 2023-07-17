@@ -11,6 +11,8 @@ class AppBinds {
     getIt.registerSingleton<IConfigsService>(
         ConfigsService(environmentServer: getIt.get<IEnvironmentService>()));
     getIt.registerSingleton<IApiService>(ApiService());
+    ShareBinds.call(getIt: getIt);
+    AthleteBinds.call(getIt: getIt);
     HomeBinds.call(getIt: getIt);
   }
 }

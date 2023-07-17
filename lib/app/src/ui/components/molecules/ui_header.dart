@@ -8,9 +8,7 @@ class UiHeader {
         elevation: 0,
         toolbarHeight: 80,
         centerTitle: false,
-        title: const Row(
-          children: [UiLogo(), UiName()],
-        ),
+        title: const UiLogo(),
         actions: [
            context.isDesktop ?Padding(
             padding: const EdgeInsets.all(16.0),

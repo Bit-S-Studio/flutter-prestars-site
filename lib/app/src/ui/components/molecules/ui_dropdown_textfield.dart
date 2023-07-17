@@ -5,8 +5,8 @@ import '../../../../../prestars_exports.dart';
 
 class UiDropdownTextField extends StatefulWidget {
   final FormGroup formGroup;
-  final List<TagModel> tags;
-  final Function(TagModel tag) onPressedExpanded;
+  final List<String> tags;
+  final Function(String tag) onPressedExpanded;
   final String hint;
   final String selectedTagsFormControlName;
   final String searchedTagsFormControlName;

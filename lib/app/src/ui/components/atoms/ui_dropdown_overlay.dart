@@ -7,8 +7,8 @@ class UiDropdownOverlay {
   static OverlayEntry call(BuildContext context,
       {required FormGroup formGroup,
       required LayerLink layerLink,
-      required Function(TagModel tag) onPressedExpanded,
-      required List<TagModel> tags,
+      required Function(String tag) onPressedExpanded,
+      required List<String> tags,
       required FocusNode focusNode,
       required String searchTagsFormControlName,
       required String searchedTagsFormControlName}) {
@@ -33,50 +33,45 @@ class UiDropdownOverlay {
                     // ignore: no_leading_underscores_for_local_identifiers
                     final _tags = form
                         .control(searchedTagsFormControlName)
-                        .value as List<TagModel>;
-                    return ConstrainedBox(
-                      constraints: BoxConstraints(
-                        minWidth: screenWidth,
-                        maxWidth: screenWidth,
-                        minHeight: 0,
-                        maxHeight: _tags.isEmpty ? 60 : _tags.length * 60 + 5,
-                      ),
-                      child: SingleChildScrollView(
-                        child: Wrap(
-                          children: [
-                            ListView.builder(
-                                shrinkWrap: true,
-                                physics: const AlwaysScrollableScrollPhysics(),
-                                itemCount: _tags.isEmpty ? 1 : _tags.length,
-                                itemBuilder: (context, index) {
-                                  return GestureDetector(
-                                    onPanDown: (_) {
-                                      onPressedExpanded(_tags[index]);
-                                      focusNode.unfocus();
-                                      formGroup
-                                          .control(searchTagsFormControlName)
-                                          .value = '';
-                                    },
-                                    child: ListTile(
-                                      title: AutoSizeText(
-                                        _tags.isNotEmpty
-                                            ? _tags[index].label ?? ''
-                                            : 'Adicione itens',
-                                        style:
-                                            ThemeService.styles.exo2Caption(),
-                                      ),
-                                      onTap: () {
-                                        onPressedExpanded(_tags[index]);
-                                        focusNode.unfocus();
-                                        formGroup
-                                            .control(searchTagsFormControlName)
-                                            .value = '';
-                                      },
-                                    ),
-                                  );
-                                }),
-                          ],
+                        .value as List<String>;
+                    return SingleChildScrollView(
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(
+                          minWidth: screenWidth,
+                          maxWidth: screenWidth,
+                          minHeight: 0,
+                          maxHeight: 300,
                         ),
+                        child: ListView.builder(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: _tags.isEmpty ? 1 : _tags.length,
+                            itemBuilder: (context, index) {
+                              return GestureDetector(
+                                onPanDown: (_) {
+                                  onPressedExpanded(_tags[index]);
+                                  focusNode.unfocus();
+                                  formGroup
+                                      .control(searchTagsFormControlName)
+                                      .value = '';
+                                },
+                                child: ListTile(
+                                  title: AutoSizeText(
+                                    _tags.isNotEmpty
+                                        ? _tags[index]
+                                        : 'Adicione itens',
+                                    style: ThemeService.styles.exo2Caption(),
+                                  ),
+                                  onTap: () {
+                                    onPressedExpanded(_tags[index]);
+                                    focusNode.unfocus();
+                                    formGroup
+                                        .control(searchTagsFormControlName)
+                                        .value = '';
+                                  },
+                                ),
+                              );
+                            }),
                       ),
                     );
                   }),

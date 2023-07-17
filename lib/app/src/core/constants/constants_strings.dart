@@ -14,7 +14,7 @@ class ConstantsStrings {
   static const String flowTitleOne = "Você se cadastra";
   static const String flowTitleTwo = "Nós avaliamos seus vídeos";
   static const String flowTitleThree = "Os clubes filtram seu perfil";
-  static const String flowTitleFour = "Vocês entram em contato";
+  static const String flowTitleFour = "O clube entra em contato";
 
   static const String flowStepOne = "Mostre o seu talento";
   static const String flowStepTwo = "Analises técnicas profissionais";

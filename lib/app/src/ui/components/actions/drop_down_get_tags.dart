@@ -4,7 +4,7 @@ import '../../../../../prestars_exports.dart';
 
 class DropDownGetTags {
   static void call(
-      {required List<TagModel> tags,
+      {required List<String> tags,
       required FormGroup form,
       required String selectedTagsFormControlName,
       required String searchedTagsFormControlName,
