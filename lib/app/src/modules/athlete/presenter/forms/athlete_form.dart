@@ -97,9 +97,9 @@ extension AthleteFormToEntity on AthleteForm {
         imageUrl: imageUrl ?? this.imageUrl,
         address: AddressEntity(city: city, state: state),
         birth: birth,
-        height: height,
-        heightOfFather: heightOfFather,
-        weight: weight,
+        height: double.parse(height.replaceAll(',', '.')),
+        heightOfFather: double.parse(heightOfFather.replaceAll(',', '.')),
+        weight: double.parse(weight.replaceAll(',', '.')),
         favoriteLag: favoriteLag ? 'direita' : 'esquerda',
         positions: ConvertFormToListPositions.call(selectedPositions),
         characteristics:

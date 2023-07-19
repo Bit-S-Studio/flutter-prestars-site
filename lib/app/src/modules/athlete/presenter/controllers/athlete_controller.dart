@@ -30,14 +30,13 @@ class AthleteController extends ValueNotifier<AthleteState> {
     final image = athleteForm.imageUrl;
     final imageBytes = base64.decode(image.split(',').last);
     final imageFile = XFile.fromData(imageBytes);
-    final uploadedImage = await uploadToStorageUseCase.call(
-        path: imageFile.path, name: imageFile.name);
+    final uploadedImage = await uploadToStorageUseCase.call(file: imageFile);
     await uploadedImage
         .fold((failure) async => value = ErrorAthlete(failure: failure),
             (imageUrl) async {
       for (final video in athleteForm.videosUrl) {
-        final uploadVideo = await uploadToStorageUseCase.call(
-            path: video?.path ?? '', name: video?.name ?? '');
+        final uploadVideo =
+            await uploadToStorageUseCase.call(file: video ?? XFile(''));
         uploadVideo.fold((failure) => value = ErrorAthlete(failure: failure),
             (videoUrl) {
           videosUrl.add(videoUrl);

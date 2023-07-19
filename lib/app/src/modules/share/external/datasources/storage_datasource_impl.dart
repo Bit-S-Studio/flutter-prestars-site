@@ -1,5 +1,6 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../../../../prestars_exports.dart';
 
@@ -9,15 +10,16 @@ class StorageDatasourceImpl extends IStorageDatasource {
   StorageDatasourceImpl({required this.storage});
 
   @override
-  Future<String> call({required String path, required String name}) async {
+  Future<String> call({required XFile file}) async {
     final storageRef = storage.ref();
 
-    final newFileName = (path).replaceAll(" ", "_").toLowerCase();
+    final newFileName = (file.path).replaceAll(" ", "_").toLowerCase();
     final userImageRef = storageRef.child("Athletes/$newFileName");
+    final fileBytes = await file.readAsBytes();
 
     try {
       final taskSnapshot =
-          await userImageRef.putString(path, format: PutStringFormat.base64);
+          await userImageRef.putData(fileBytes);
 
       late String url;
       switch (taskSnapshot.state) {

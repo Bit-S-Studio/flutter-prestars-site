@@ -85,7 +85,7 @@ tasks:
     # deps: [build:utils-image, install:dependencies]
     cmds:
       - >
-        flutter build web -t lib/main_{{.ENVIRONEMNT}}.dart --release --web-browser-flag --enable-features=SharedArrayBuffer
+        flutter build web -t lib/main_{{.ENV}}.dart --release
 
   publish:artifact:
     desc: "Roda o comando de build da aplicação (Usado pela esteira)"

@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../../../../prestars_exports.dart';
 
 abstract class IUploadToStorageUseCase {
-  Future<Either<Failure, String>> call(
-      {required String path, required String name});
+  Future<Either<Failure, String>> call({required XFile file});
 }
 
 class UploadToStorageUseCaseImpl extends IUploadToStorageUseCase {
@@ -12,7 +12,6 @@ class UploadToStorageUseCaseImpl extends IUploadToStorageUseCase {
 
   UploadToStorageUseCaseImpl(this._repository);
   @override
-  Future<Either<Failure, String>> call(
-          {required String path, required String name}) async =>
-      await _repository.call(path: path, name: name);
+  Future<Either<Failure, String>> call({required XFile file}) async =>
+      await _repository.call(file: file);
 }

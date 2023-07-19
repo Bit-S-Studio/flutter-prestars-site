@@ -20,6 +20,14 @@ class BasicForms extends StatelessWidget {
             AthleteImage(controller: controller),
             const SizedBox(height: 20),
             const UiField(
+                labelText: ConstantsLabels.name,
+                formControlName: ConstantsForms.name,
+                isWhite: true,
+                isMandatory: true,
+                enableLabel2: true,
+                type: TextfieldType.name),
+            const SizedBox(height: 20),
+            const UiField(
                 labelText: ConstantsLabels.email,
                 formControlName: ConstantsForms.email,
                 isWhite: true,

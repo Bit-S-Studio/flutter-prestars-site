@@ -11,7 +11,7 @@ class AthleteForms extends StatelessWidget {
     final controller = GetIt.I.get<AthleteController>();
     return Flexible(
       child: Container(
-        height: context.isDesktop ? context.height * 1.2 : context.height * 3,
+        height: context.isDesktop ? context.height * 1.4 : context.height * 3.2,
         padding: const EdgeInsets.all(32),
         decoration: BoxDecoration(
           color: ThemeService.colors.primary,

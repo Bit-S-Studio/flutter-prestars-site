@@ -9,9 +9,9 @@ class AthleteEntity extends Equatable {
   final String phone;
   final AddressEntity address;
   final String birth;
-  final String height;
-  final String heightOfFather;
-  final String weight;
+  final double height;
+  final double heightOfFather;
+  final double weight;
   final String favoriteLag;
   final List<String> positions;
   final List<String> characteristics;

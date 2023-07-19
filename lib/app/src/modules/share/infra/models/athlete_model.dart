@@ -1,4 +1,5 @@
 import '../../../../../../prestars_exports.dart';
+import 'package:uuid/uuid.dart';
 
 class AthleteModel extends AthleteEntity {
   const AthleteModel({
@@ -9,9 +10,9 @@ class AthleteModel extends AthleteEntity {
     required String imageUrl,
     required AddressModel address,
     required String birth,
-    required String height,
-    required String heightOfFather,
-    required String weight,
+    required double height,
+    required double heightOfFather,
+    required double weight,
     required String favoriteLag,
     required List<String> positions,
     required List<String> characteristics,
@@ -40,9 +41,9 @@ class AthleteModel extends AthleteEntity {
         imageUrl: json['image-url'] ?? '',
         address: AddressModel.fromJson(json['address'] ?? {}),
         birth: json['birth'] ?? '',
-        height: json['height'] ?? '',
-        heightOfFather: json['height-of-father'] ?? '',
-        weight: json['weight'] ?? '',
+        height: json['height'] ?? 0.1,
+        heightOfFather: json['height-of-father'] ?? 0.1,
+        weight: json['weight'] ?? 0.1,
         favoriteLag: json['favorite-lag'] ?? '',
         positions: List<String>.from(json['positions'] ?? []),
         videosUrl: List<String>.from(json['videos-url'] ?? []),
@@ -50,20 +51,21 @@ class AthleteModel extends AthleteEntity {
       );
 
   Map<String, dynamic> toJson() => {
-        'uid': uid,
+        'uid': const Uuid().v4(),
         'name': name,
         'email': email,
         'phone': phone,
-        'image-url': imageUrl,
-        'address': address.toModel.toJson(),
+        'imageUrl': imageUrl,
+        'city': address.city,
+        'state': address.state,
         'birth': birth,
         'height': height,
-        'height-of-father': heightOfFather,
+        'heightOfFather': heightOfFather,
         'weight': weight,
-        'favorite-lag': favoriteLag,
+        'favoriteLag': favoriteLag,
         'positions': positions,
         'characteristics': characteristics,
-        'videos-url': videosUrl
+        'videosUrl': videosUrl
       };
 
   @override

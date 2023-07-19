@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../../../../prestars_exports.dart';
@@ -22,7 +23,7 @@ class AthleteVideos extends StatelessWidget {
                 child: ReactiveValueListenableBuilder(
                     formControlName: ConstantsForms.videosUrl,
                     builder: (context, form, child) {
-                      final videos = form.value as List<String?>;
+                      final videos = form.value as List<XFile?>;
                       return ListView.builder(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,

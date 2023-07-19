@@ -11,28 +11,27 @@ class AthleteDatasourceImpl extends IAthleteDatasource {
 
   @override
   Future<AthleteModel> create({required AthleteModel model}) async {
-    final mutation = await apiService.client.mutate(
+    final result = await apiService.client.mutate(
       MutationOptions(
         document: gql(AthleteOption.mutationString),
-        variables: {'createAthleteInput': model.toJson()},
+        variables: model.toJson(),
       ),
     );
-    if (mutation.data.isDefinedAndNotNull) {
-      print(mutation.data);
+    if (result.data.isDefinedAndNotNull) {
+      return model;
+    } else {
+      throw const ErrorResponse(message: 'falhou');
     }
-    throw UnimplementedError();
   }
 
   @override
   Future<SuccessResponse> delete({required String id}) {
-    // TODO: implement delete
     throw UnimplementedError();
   }
 
   @override
   Future<AthleteModel> update(
       {required String id, required AthleteModel model}) {
-    // TODO: implement update
     throw UnimplementedError();
   }
 }
