@@ -18,8 +18,10 @@ class ConstantsForms {
   static const String positions = 'positions';
   static const String characteristics = 'characteristics';
   static const String videosUrl = 'videos-url';
+  static const String videos = 'videos';
   static const String positionsSearch = 'positions-search';
   static const String positionsSearched = 'positions-searched';
+  static const String videosUrlCurrent = 'video-url-current';
   static const String characteristicsSearch = 'characteristics-search';
   static const String characteristicsSearched = 'characteristics-searched';
 }

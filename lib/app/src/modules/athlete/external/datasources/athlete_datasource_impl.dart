@@ -1,5 +1,3 @@
-import 'dart:js_interop';
-
 import 'package:graphql_flutter/graphql_flutter.dart';
 
 import '../../../../../../prestars_exports.dart';
@@ -17,7 +15,7 @@ class AthleteDatasourceImpl extends IAthleteDatasource {
         variables: model.toJson(),
       ),
     );
-    if (result.data.isDefinedAndNotNull) {
+    if (result.data != null) {
       return model;
     } else {
       throw const ErrorResponse(message: 'falhou');

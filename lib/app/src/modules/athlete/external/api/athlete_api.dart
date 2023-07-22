@@ -1,11 +1,4 @@
 class AthleteOption {
-  // static String get mutationString => r'''
-  //   mutation createAthlete($input:createAthleteInput) {
-  //       createAthlete(input: {fields: $input}) {
-  //         createAthleteOutput
-  //       }
-  //   }
-  // ''';
   static String get mutationString => r'''
   mutation CreateAthlete(
     $uid: String,
@@ -22,6 +15,7 @@ class AthleteOption {
     $positions: json,
     $state: String,
     $videosUrl: json,
+    $videos: json,
     $weight: float8
   ) {
     insert_athletes_one(
@@ -40,6 +34,7 @@ class AthleteOption {
         positions: $positions,
         state: $state,
         videos_url: $videosUrl,
+        videos: $videos,
         weight: $weight
       }
     ) {

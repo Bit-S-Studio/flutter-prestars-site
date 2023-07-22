@@ -16,6 +16,7 @@ class AthleteEntity extends Equatable {
   final List<String> positions;
   final List<String> characteristics;
   final List<String> videosUrl;
+  final List<String> videos;
 
   const AthleteEntity(
       {required this.uid,
@@ -31,7 +32,8 @@ class AthleteEntity extends Equatable {
       required this.favoriteLag,
       required this.positions,
       required this.characteristics,
-      required this.videosUrl});
+      required this.videosUrl,
+      required this.videos});
 
   @override
   List<Object?> get props => [
@@ -48,6 +50,7 @@ class AthleteEntity extends Equatable {
         favoriteLag,
         positions,
         characteristics,
-        videosUrl
+        videosUrl,
+        videos
       ];
 }

@@ -48,7 +48,7 @@ class UiField extends StatelessWidget {
   final TextfieldType type;
   final double? padding;
   final String? helperText;
-  final VoidCallback? onSubmitted;
+  final void Function(FormControl<Object?>)? onSubmitted;
   final VoidCallback? onTap;
   final int? maxLenght;
   final int? maxLines;
@@ -103,7 +103,7 @@ class UiField extends StatelessWidget {
               maxLines: maxLines ?? 1,
               minLines: 1,
               formControlName: formControlName,
-              // onSubmitted: onSubmitted,
+              onSubmitted: onSubmitted,
               validationMessages: ValidationMessages.value(
                   minLengthLabel: minLenghtMessage != null
                       ? (error) => (minLenghtMessage ?? '')

@@ -15,6 +15,7 @@ class AthleteFormUntouchAllErrors {
     formGroup.control(ConstantsForms.heightOfFather).markAsUntouched();
     formGroup.control(ConstantsForms.weight).markAsUntouched();
     formGroup.control(ConstantsForms.videosUrl).markAsUntouched();
+    formGroup.control(ConstantsForms.videos).markAsUntouched();
     formGroup.control(ConstantsForms.positions).markAsUntouched();
     formGroup.control(ConstantsForms.characteristics).markAsUntouched();
   }

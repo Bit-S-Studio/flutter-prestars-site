@@ -22,3 +22,4 @@ export 'ui_simple_rich_text.dart';
 export 'ui_name.dart';
 export 'ui_emphasis_text.dart';
 export 'ui_select.dart';
+export 'ui_cached_image.dart';

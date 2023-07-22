@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../prestars_exports.dart';
@@ -30,11 +29,9 @@ class UiTags extends StatelessWidget {
                             backgroundColor: ThemeService.colors.primary,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(4)),
-                            label: AutoSizeText(
+                            label: Text(
                               selectedList[index],
                               style: ThemeService.styles.exo2LightBody(),
-                              maxFontSize: 16,
-                              minFontSize: 10,
                               maxLines: 2,
                             ),
                             deleteIconColor: ThemeService.colors.white,

@@ -1,8 +1,8 @@
 class GetCharacteristicsList {
   static List<String> call() => [
         '#velocidade',
-        '#drible'
-            '#passe-curto',
+        '#drible',
+        '#passe-curto',
         '#passe-longo',
         '#finalização',
         '#inversão-de-jogada',

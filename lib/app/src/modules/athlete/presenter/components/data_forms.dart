@@ -49,8 +49,16 @@ class DataForms extends StatelessWidget {
               const SizedBox(height: 20),
               const CharacteristicsField(),
               const SizedBox(height: 20),
-              AthleteVideos(controller: controller),
+              UiFieldTags(
+                labelText: ConstantsLabels.videosUrl,
+                formControlName: ConstantsForms.videosUrlCurrent,
+                isMandatory: false,
+                setValue: (value) => controller.athleteForm.setVideoUrl = value,
+                addedTagsFormControlName: ConstantsForms.videosUrl,
+                formGroup: controller.athleteForm.formGroup,
+              ),
               const SizedBox(height: 20),
+              AthleteVideos(controller: controller,),
               AthleteSubmitButton(controller: controller)
             ],
           )),

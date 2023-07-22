@@ -8,7 +8,7 @@ class AthleteOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: context.isDesktop ? 340 : 600),
+      constraints: BoxConstraints(maxHeight: context.isDesktop ? 380 : 800),
       child: Flex(
         direction: context.isDesktop ? Axis.horizontal : Axis.vertical,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

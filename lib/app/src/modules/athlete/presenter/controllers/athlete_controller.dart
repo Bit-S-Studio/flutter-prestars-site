@@ -25,7 +25,7 @@ class AthleteController extends ValueNotifier<AthleteState> {
   }
 
   void submit() async {
-    List<String> videosUrl = [];
+    List<String> videos = [];
     value = LoadingAthlete();
     final image = athleteForm.imageUrl;
     final imageBytes = base64.decode(image.split(',').last);
@@ -34,19 +34,18 @@ class AthleteController extends ValueNotifier<AthleteState> {
     await uploadedImage
         .fold((failure) async => value = ErrorAthlete(failure: failure),
             (imageUrl) async {
-      for (final video in athleteForm.videosUrl) {
+      for (final video in athleteForm.videos) {
         final uploadVideo =
             await uploadToStorageUseCase.call(file: video ?? XFile(''));
         uploadVideo.fold((failure) => value = ErrorAthlete(failure: failure),
             (videoUrl) {
-          videosUrl.add(videoUrl);
+          videos.add(videoUrl);
         });
       }
-      final entity =
-          athleteForm.toEntity(imageUrl: imageUrl, videosUrl: videosUrl);
+      final entity = athleteForm.toEntity(imageUrl: imageUrl, videos: videos);
       final result = await createAthleteUseCase.call(entity: entity);
       result.fold((failure) async => value = ErrorAthlete(failure: failure),
-          (r) => SuccessAthlete());
+          (r) => value = SuccessAthlete());
     });
   }
 }

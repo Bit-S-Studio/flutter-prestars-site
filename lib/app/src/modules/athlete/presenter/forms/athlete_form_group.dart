@@ -41,8 +41,10 @@ class AthelteFormGroup {
             validators: [Validators.required, Validators.minLength(1)]),
         ConstantsForms.characteristicsSearched:
             FormControl<List<String>>(value: <String>[]),
+        ConstantsForms.videosUrl: FormControl<List<String>>(value: <String>[]),
         ConstantsForms.characteristicsSearch: FormControl<String>(value: ''),
-        ConstantsForms.videosUrl:
+        ConstantsForms.videosUrlCurrent: FormControl<String>(value: ''),
+        ConstantsForms.videos:
             FormArray<XFile>([], validators: [Validators.minLength(1)]),
       });
 }

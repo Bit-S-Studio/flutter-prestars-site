@@ -93,17 +93,6 @@ class UiMultiSelectTags extends StatelessWidget {
             return value;
           },
         ),
-        // UiDropdownTextField(
-        //     formGroup: formGroup,
-        //     tags: formGroup.control(searchedTagsFormControlName).value
-        //         as List<String>,
-        //     onPressedExpanded: onPressedExpanded,
-        //     hint: hint ?? '',
-        //     selectedTagsFormControlName: formControlName ?? '',
-        //     searchedTagsFormControlName: searchedTagsFormControlName,
-        //     searchTagsFormControlName: searchTagsFormControlName,
-        //     iconColor: _getColorWithValid() ?? ThemeService.colors.primary,
-        //     searchFunction: searchFunction),
         UiTags(
             selectedList: tagListSelected,
             isEnabled: isEnabled,

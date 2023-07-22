@@ -21,7 +21,7 @@ class AthleteVideos extends StatelessWidget {
               SizedBox(
                 height: 60,
                 child: ReactiveValueListenableBuilder(
-                    formControlName: ConstantsForms.videosUrl,
+                    formControlName: ConstantsForms.videos,
                     builder: (context, form, child) {
                       final videos = form.value as List<XFile?>;
                       return ListView.builder(

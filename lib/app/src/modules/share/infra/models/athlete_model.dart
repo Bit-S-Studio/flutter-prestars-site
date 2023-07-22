@@ -17,6 +17,7 @@ class AthleteModel extends AthleteEntity {
     required List<String> positions,
     required List<String> characteristics,
     required List<String> videosUrl,
+    required List<String> videos,
   }) : super(
             uid: uid,
             name: name,
@@ -31,7 +32,8 @@ class AthleteModel extends AthleteEntity {
             favoriteLag: favoriteLag,
             positions: positions,
             characteristics: characteristics,
-            videosUrl: videosUrl);
+            videosUrl: videosUrl,
+            videos: videos);
 
   factory AthleteModel.fromJson(Map<String, dynamic> json) => AthleteModel(
         uid: json['uid'] ?? '',
@@ -47,6 +49,7 @@ class AthleteModel extends AthleteEntity {
         favoriteLag: json['favorite-lag'] ?? '',
         positions: List<String>.from(json['positions'] ?? []),
         videosUrl: List<String>.from(json['videos-url'] ?? []),
+        videos: List<String>.from(json['videos'] ?? []),
         characteristics: List<String>.from(json['characteristics'] ?? []),
       );
 
@@ -65,7 +68,8 @@ class AthleteModel extends AthleteEntity {
         'favoriteLag': favoriteLag,
         'positions': positions,
         'characteristics': characteristics,
-        'videosUrl': videosUrl
+        'videosUrl': videosUrl,
+        'videos': videos
       };
 
   @override
@@ -83,7 +87,8 @@ class AthleteModel extends AthleteEntity {
         favoriteLag,
         positions,
         characteristics,
-        videosUrl
+        videosUrl,
+        videos
       ];
 }
 
@@ -102,7 +107,8 @@ extension AthleteEntityToModel on AthleteEntity {
       favoriteLag: favoriteLag,
       positions: positions,
       characteristics: characteristics,
-      videosUrl: videosUrl);
+      videosUrl: videosUrl,
+      videos: videos);
 }
 
 extension AthleteModelToEntity on AthleteModel {
@@ -120,5 +126,6 @@ extension AthleteModelToEntity on AthleteModel {
       favoriteLag: favoriteLag,
       positions: positions,
       characteristics: characteristics,
-      videosUrl: videosUrl);
+      videosUrl: videosUrl,
+      videos: videos);
 }

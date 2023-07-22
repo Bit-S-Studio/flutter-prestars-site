@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 import '../../../../../../prestars_exports.dart';
 
 class AthleteSubmitProcess {
-  static void call(BuildContext context, AthleteState value,
-      AthleteController controller) {
+  static void call(
+      BuildContext context, AthleteState value, AthleteController controller) {
     if (value is SuccessAthlete) {
       WidgetsBinding.instance.addPostFrameCallback((_) async {
         ShowSuccessDialog.call(context,
             text: ConstantsStrings.successDialogTitle, then: (() {
           WidgetsBinding.instance.addPostFrameCallback((_) async {
             AthleteResetForm.call(controller.athleteForm.formGroup);
+            AthleteFormUntouchAllErrors.call(controller.athleteForm.formGroup);
           });
         }));
       });

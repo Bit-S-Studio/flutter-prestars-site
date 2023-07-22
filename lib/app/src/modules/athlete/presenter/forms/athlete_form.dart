@@ -28,7 +28,8 @@ class AthleteForm {
           as List<String>;
   List<String> get selectedCharacteristics =>
       formGroup.control(ConstantsForms.characteristics).value as List<String>;
-  List<XFile?> get videosUrl =>
+  List<XFile?> get videos => formGroup.control(ConstantsForms.videos).value;
+  List<String> get videosUrl =>
       formGroup.control(ConstantsForms.videosUrl).value;
 
   void showErrors() {
@@ -51,13 +52,16 @@ class AthleteForm {
   }
 
   void addVideo(XFile value) {
-    final videos =
-        formGroup.control(ConstantsForms.videosUrl) as FormArray<XFile>;
+    final videos = formGroup.control(ConstantsForms.videos) as FormArray<XFile>;
     videos.add(FormControl<XFile>(value: value));
   }
 
   set setPosition(String position) {
     formGroup.control(ConstantsForms.positionsSearch).value = position;
+  }
+
+  set setVideoUrl(String videoUrl) {
+    formGroup.control(ConstantsForms.videosUrlCurrent).value = videoUrl;
   }
 
   set setCharacteristic(String characteristic) {
@@ -88,12 +92,13 @@ class AthleteForm {
 }
 
 extension AthleteFormToEntity on AthleteForm {
-  AthleteEntity toEntity({String? imageUrl, List<String>? videosUrl}) =>
+  AthleteEntity toEntity({String? imageUrl, List<String>? videos}) =>
       AthleteEntity(
         uid: uid,
         name: name,
         email: email,
         phone: phone,
+        videosUrl: videosUrl,
         imageUrl: imageUrl ?? this.imageUrl,
         address: AddressEntity(city: city, state: state),
         birth: birth,
@@ -104,8 +109,8 @@ extension AthleteFormToEntity on AthleteForm {
         positions: ConvertFormToListPositions.call(selectedPositions),
         characteristics:
             ConvertFormToListPositions.call(selectedCharacteristics),
-        videosUrl: videosUrl ??
+        videos: videos ??
             List<String>.from(
-                this.videosUrl.map((video) => video?.path ?? '').toList()),
+                this.videos.map((video) => video?.path ?? '').toList()),
       );
 }
