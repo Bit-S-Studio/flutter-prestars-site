@@ -43,6 +43,8 @@ class ValidationMessages {
             emptyArrayLabel ?? (error) => 'O E-mail não é válido',
         ConstantsValidators.AGE:
             emptyArrayLabel ?? (error) => 'A idade mínima é de 18 anos.',
+        ConstantsValidators.URL:
+            emptyArrayLabel ?? (error) => 'A link é inválida',
       };
 
   List<Map<String, dynamic>? Function(AbstractControl<dynamic>)> validations({

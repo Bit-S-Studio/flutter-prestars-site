@@ -41,7 +41,7 @@ class UiErrorDialog extends StatelessWidget {
                 AutoSizeText(
                   error?.message ?? ConstantsStrings.defaultErrorMessage,
                   style: ThemeService.styles.exo2Body(
-                      color: ThemeService.colors.textPrimary,
+                      color: ThemeService.colors.white,
                       fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
@@ -68,7 +68,7 @@ class UiErrorDialog extends StatelessWidget {
                   child: AutoSizeText(
                     secondaryButtonText ?? 'secondary_button_text_error',
                     style: ThemeService.styles
-                        .exo2Body(color: ThemeService.colors.textPrimary),
+                        .exo2Body(color: ThemeService.colors.white),
                   )),
           ],
         ),

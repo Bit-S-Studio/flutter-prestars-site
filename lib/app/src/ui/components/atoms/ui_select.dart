@@ -9,12 +9,15 @@ class UiSelect extends StatelessWidget {
   final String selectOne;
   final String selectTwo;
   final String formControlName;
-  const UiSelect(
-      {super.key,
-      required this.label,
-      required this.selectOne,
-      required this.selectTwo,
-      required this.formControlName});
+  final bool isWhite;
+  const UiSelect({
+    super.key,
+    required this.label,
+    required this.selectOne,
+    required this.selectTwo,
+    required this.formControlName,
+    this.isWhite = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,9 @@ class UiSelect extends StatelessWidget {
                 text: label,
                 style: ThemeService.styles.exo2Caption(
                     fontWeight: FontWeight.w500,
-                    color: ThemeService.colors.textPrimary),
+                    color: isWhite
+                        ? ThemeService.colors.white
+                        : ThemeService.colors.textSecondary),
                 children: [
                   TextSpan(text: ' (*)', style: ThemeService.styles.danger())
                 ]),
@@ -49,29 +54,6 @@ class UiSelect extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                         color: selectedOne
-                            ? ThemeService.colors.primary
-                            : ThemeService.colors.white,
-                        borderRadius: BorderRadius.circular(4),
-                        border: Border.all(
-                            color: selectedOne
-                                ? ThemeService.colors.white
-                                : ThemeService.colors.primary)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(selectOne,
-                          style: ThemeService.styles.exo2Caption(
-                              color: selectedOne
-                                  ? ThemeService.colors.white
-                                  : ThemeService.colors.primary)),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 16),
-                InkWell(
-                  onTap: () => formGroup.control(formControlName).value = false,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: selectedOne
                             ? ThemeService.colors.white
                             : ThemeService.colors.primary,
                         borderRadius: BorderRadius.circular(4),
@@ -81,11 +63,35 @@ class UiSelect extends StatelessWidget {
                                 : ThemeService.colors.white)),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
+                      child: Text(selectOne,
+                          style: ThemeService.styles.exo2Caption(
+                            color: selectedOne
+                                ? ThemeService.colors.primary
+                                : ThemeService.colors.white,
+                          )),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                InkWell(
+                  onTap: () => formGroup.control(formControlName).value = false,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: selectedOne
+                            ? ThemeService.colors.primary
+                            : ThemeService.colors.white,
+                        borderRadius: BorderRadius.circular(4),
+                        border: Border.all(
+                            color: selectedOne
+                                ? ThemeService.colors.white
+                                : ThemeService.colors.primary)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: Text(selectTwo,
                           style: ThemeService.styles.exo2Caption(
                               color: selectedOne
-                                  ? ThemeService.colors.primary
-                                  : ThemeService.colors.white)),
+                                  ? ThemeService.colors.white
+                                  : ThemeService.colors.primary)),
                     ),
                   ),
                 ),

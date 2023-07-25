@@ -14,4 +14,5 @@ class ConstantsValidators {
   static const AUTHORIZE = 'authorize';
   static const NAME = 'name';
   static const MIN = 'min';
+  static const URL = 'url';
 }

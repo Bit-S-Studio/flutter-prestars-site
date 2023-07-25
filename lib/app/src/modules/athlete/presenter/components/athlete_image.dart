@@ -17,8 +17,9 @@ class AthleteImage extends StatelessWidget {
             return InkWell(
               onTap: () => CaptureImage.call(form: controller.athleteForm),
               child: Container(
-                height: 160,
-                width: 160,
+                height: 120,
+                width: 120,
+                margin: const EdgeInsets.symmetric(horizontal: 16),
                 decoration: BoxDecoration(
                     color: ThemeService.colors.white,
                     borderRadius: BorderRadius.circular(10)),
@@ -30,8 +31,8 @@ class AthleteImage extends StatelessWidget {
             return InkWell(
               onTap: () => CaptureImage.call(form: controller.athleteForm),
               child: Container(
-                height: 160,
-                width: 160,
+                height: 120,
+                width: 120,
                 margin: const EdgeInsets.only(right: 12.0),
                 decoration: BoxDecoration(
                     image: DecorationImage(

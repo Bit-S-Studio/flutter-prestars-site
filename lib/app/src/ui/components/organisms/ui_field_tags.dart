@@ -49,6 +49,9 @@ class UiFieldTags extends ReactiveFormField<List<String>, List<String>> {
                       field.control
                           .setErrors({'O campo deve ter no minimo 1 item': 1});
                     }
+                    formGroup
+                        .control(formControlName)
+                        .removeError(ConstantsValidators.URL);
                   }
                 },
                 onPressedExpanded: (String tag) async {
@@ -62,6 +65,9 @@ class UiFieldTags extends ReactiveFormField<List<String>, List<String>> {
                       field.didChange([...selectedTags, tag]);
                     }
                     formGroup.control(formControlName).value = '';
+                    formGroup
+                        .control(formControlName)
+                        .removeError(ConstantsValidators.URL);
                   }
                 },
                 setValue: setValue,

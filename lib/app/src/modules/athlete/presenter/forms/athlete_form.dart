@@ -19,6 +19,7 @@ class AthleteForm {
       formGroup.control(ConstantsForms.heightOfFather).value;
   String get weight => formGroup.control(ConstantsForms.weight).value;
   bool get favoriteLag => formGroup.control(ConstantsForms.favoriteLag).value;
+  bool get gender => formGroup.control(ConstantsForms.gender).value;
   List<String> get positionsSearched =>
       formGroup.control(ConstantsForms.positionsSearched).value as List<String>;
   List<String> get selectedPositions =>
@@ -88,6 +89,7 @@ class AthleteForm {
   Map<String, String> Function(dynamic)? validationMessages = (control) => {
         'required': 'Esse campo precisa ser preenchido',
         'minLength': 'O campo deve ter no minimo 1 item',
+        'url': 'A url é inválida'
       };
 }
 
@@ -106,6 +108,7 @@ extension AthleteFormToEntity on AthleteForm {
         heightOfFather: double.parse(heightOfFather.replaceAll(',', '.')),
         weight: double.parse(weight.replaceAll(',', '.')),
         favoriteLag: favoriteLag ? 'direita' : 'esquerda',
+        gender: gender ? 'masculino' : 'femenino',
         positions: ConvertFormToListPositions.call(selectedPositions),
         characteristics:
             ConvertFormToListPositions.call(selectedCharacteristics),

@@ -28,7 +28,7 @@ class AthleteTwo extends StatelessWidget {
                         textFinish: 'jogam em equipe')),
                 Flexible(
                   child: AutoSizeText(
-                    'Se você é um professor que acredita no potencial brilhante de seus alunos, oriente-os em direção ao sucesso',
+                    'Adicione seus vídeos postados em outras plataformas, ou novos vídeos, uma estrela fortalece sua equipe',
                     maxFontSize: 30,
                     minFontSize: 18,
                     style: ThemeService.styles.exo2Subtitle(),

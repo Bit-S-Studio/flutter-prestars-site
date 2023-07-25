@@ -104,7 +104,7 @@ class UiField extends StatelessWidget {
               minLines: 1,
               formControlName: formControlName,
               onSubmitted: onSubmitted,
-              validationMessages: ValidationMessages.value(
+              validationMessages:  ValidationMessages.value(
                   minLengthLabel: minLenghtMessage != null
                       ? (error) => (minLenghtMessage ?? '')
                       : null,

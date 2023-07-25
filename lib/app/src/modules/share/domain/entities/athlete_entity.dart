@@ -13,6 +13,7 @@ class AthleteEntity extends Equatable {
   final double heightOfFather;
   final double weight;
   final String favoriteLag;
+  final String gender;
   final List<String> positions;
   final List<String> characteristics;
   final List<String> videosUrl;
@@ -30,6 +31,7 @@ class AthleteEntity extends Equatable {
       required this.heightOfFather,
       required this.weight,
       required this.favoriteLag,
+      required this.gender,
       required this.positions,
       required this.characteristics,
       required this.videosUrl,
@@ -48,6 +50,7 @@ class AthleteEntity extends Equatable {
         heightOfFather,
         weight,
         favoriteLag,
+        gender,
         positions,
         characteristics,
         videosUrl,

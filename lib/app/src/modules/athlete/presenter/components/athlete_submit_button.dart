@@ -27,7 +27,7 @@ class AthleteSubmitButton extends StatelessWidget {
                   onPressed: isValid ? () async => controller.submit() : null,
                   isLoading: value is LoadingAthlete,
                   label: ConstantsLabels.save,
-                  themeType: isValid ? ThemeType.primary : ThemeType.inactive,
+                  themeType: isValid ? ThemeType.secondary : ThemeType.inactive,
                 );
               }),
             );

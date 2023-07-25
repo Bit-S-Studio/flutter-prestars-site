@@ -8,7 +8,7 @@ class GetButtonTextColor {
       case ThemeType.primary:
         return ThemeService.colors.textWhite;
       case ThemeType.secondary:
-        return ThemeService.colors.textPrimary;
+        return ThemeService.colors.primary;
       case ThemeType.tertiary:
         return ThemeService.colors.white;
       case ThemeType.confirm:

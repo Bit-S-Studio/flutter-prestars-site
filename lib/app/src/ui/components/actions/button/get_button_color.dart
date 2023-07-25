@@ -8,7 +8,7 @@ class GetButtonColor {
       case ThemeType.primary:
         return ThemeService.colors.buttonPrimary;
       case ThemeType.secondary:
-        return ThemeService.colors.secondary;
+        return ThemeService.colors.white;
       case ThemeType.tertiary:
         return ThemeService.colors.iconSecondary;
       case ThemeType.confirm:

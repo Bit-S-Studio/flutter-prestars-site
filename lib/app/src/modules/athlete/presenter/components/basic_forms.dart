@@ -14,9 +14,8 @@ class BasicForms extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 20),
             AthleteImage(controller: controller),
             const SizedBox(height: 20),
             const UiField(
@@ -66,6 +65,13 @@ class BasicForms extends StatelessWidget {
                 isMandatory: true,
                 enableLabel2: true,
                 type: TextfieldType.text),
+            const SizedBox(height: 20),
+            const UiSelect(
+                label: ConstantsLabels.gender,
+                selectOne: 'Masculino',
+                selectTwo: 'Feminino',
+                isWhite: true,
+                formControlName: ConstantsForms.gender),
           ],
         ));
   }

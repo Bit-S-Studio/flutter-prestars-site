@@ -105,14 +105,11 @@ class UiDropdownField<T> extends StatelessWidget {
               hintText: hintText,
               hintStyle: ThemeService.styles.exo2Caption(),
               focusedBorder: UnderlineInputBorder(
-                  borderSide:
-                      BorderSide(color: ThemeService.colors.iconPrimary)),
+                  borderSide: BorderSide(color: ThemeService.colors.white)),
               focusedErrorBorder: UnderlineInputBorder(
-                  borderSide:
-                      BorderSide(color: ThemeService.colors.iconPrimary)),
+                  borderSide: BorderSide(color: ThemeService.colors.white)),
               enabledBorder: UnderlineInputBorder(
-                  borderSide:
-                      BorderSide(color: ThemeService.colors.iconPrimary)),
+                  borderSide: BorderSide(color: ThemeService.colors.white)),
               errorBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: ThemeService.colors.danger)),
               disabledBorder: UnderlineInputBorder(
@@ -120,9 +117,8 @@ class UiDropdownField<T> extends StatelessWidget {
               suffixIcon: RotatedBox(
                 quarterTurns: 1,
                 child: Icon(Icons.arrow_forward_ios_outlined,
-                    color: ThemeService.colors.primary, size: 24),
-              )
-              ),
+                    color: ThemeService.colors.white, size: 24),
+              )),
         ),
         showErrors: (control) => control.invalid && control.touched,
       ),

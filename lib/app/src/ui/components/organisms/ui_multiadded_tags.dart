@@ -65,13 +65,24 @@ class UiMultiAddedTags extends StatelessWidget {
         UiField(
             labelText: '',
             formControlName: formControlName ?? '',
+            validationMessages: validationMessages,
             type: TextfieldType.text,
-            onSubmitted: (form) => onPressedExpanded(form.value as String),
+            isWhite: true,
+            onSubmitted: (form) {
+              if (form.valid) {
+                onPressedExpanded(form.value as String);
+              }
+            },
             suffix: InkWell(
-              onTap: () => onPressedExpanded(
-                  formGroup.control(formControlName ?? '').value as String),
+              onTap: () {
+                final isValid = formGroup.control(formControlName ?? '').valid;
+                if (isValid) {
+                  onPressedExpanded(
+                      formGroup.control(formControlName ?? '').value as String);
+                }
+              },
               child: Icon(Icons.add_circle_outline,
-                  color: ThemeService.colors.primary),
+                  color: ThemeService.colors.white),
             )),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -80,11 +91,11 @@ class UiMultiAddedTags extends StatelessWidget {
               isEnabled: isEnabled,
               onDeleteExpanded: onDeleteExpanded),
         ),
-        if (formControlName != null)
-          UiErrorList(
-              hasFirstError: true,
-              validationMessages: validationMessages,
-              formControlName: formControlName ?? '')
+        // if (formControlName != null)
+        //   UiErrorList(
+        //       hasFirstError: true,
+        //       validationMessages: validationMessages,
+        //       formControlName: formControlName ?? '')
       ],
     );
   }
@@ -92,6 +103,6 @@ class UiMultiAddedTags extends StatelessWidget {
   Color? _getColorWithValid() {
     return !isValid && isEnabled && showErrors
         ? ThemeService.colors.danger
-        : ThemeService.colors.iconPrimary;
+        : ThemeService.colors.white;
   }
 }

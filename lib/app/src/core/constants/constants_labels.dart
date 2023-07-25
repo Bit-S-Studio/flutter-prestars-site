@@ -84,5 +84,6 @@ class ConstantsLabels {
   static const favoriteLab = 'Perna Favorita';
   static const favoriteLabRight = 'Direita';
   static const favoriteLabLeft = 'Esquerda';
-  static const videosUrl = 'Adicione url de videos de outras plataformas';
+  static const gender = 'Gênero';
+  static const videosUrl = 'Adicione links de videos de outras plataformas';
 }

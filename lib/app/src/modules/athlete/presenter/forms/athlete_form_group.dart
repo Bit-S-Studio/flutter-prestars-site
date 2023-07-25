@@ -30,6 +30,8 @@ class AthelteFormGroup {
             FormControl<String>(value: '', validators: [Validators.required]),
         ConstantsForms.favoriteLag:
             FormControl<bool>(value: true, validators: [Validators.required]),
+        ConstantsForms.gender:
+            FormControl<bool>(value: true, validators: [Validators.required]),
         ConstantsForms.positions: FormControl<List<String>>(
             value: <String>[],
             validators: [Validators.required, Validators.minLength(1)]),
@@ -43,8 +45,12 @@ class AthelteFormGroup {
             FormControl<List<String>>(value: <String>[]),
         ConstantsForms.videosUrl: FormControl<List<String>>(value: <String>[]),
         ConstantsForms.characteristicsSearch: FormControl<String>(value: ''),
-        ConstantsForms.videosUrlCurrent: FormControl<String>(value: ''),
-        ConstantsForms.videos:
-            FormArray<XFile>([], validators: [Validators.minLength(1)]),
-      });
+        ConstantsForms.videosUrlCurrent:
+            FormControl<String>(value: '', validators: [const UrlValidator()]),
+        ConstantsForms.videos: FormArray<XFile>([]),
+      }, validators: [
+        VideoValidator(
+            controlName: ConstantsForms.videosUrl,
+            matchingControlName: ConstantsForms.videos)
+      ]);
 }

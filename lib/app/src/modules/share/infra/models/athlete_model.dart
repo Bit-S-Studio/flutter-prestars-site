@@ -14,6 +14,7 @@ class AthleteModel extends AthleteEntity {
     required double heightOfFather,
     required double weight,
     required String favoriteLag,
+    required String gender,
     required List<String> positions,
     required List<String> characteristics,
     required List<String> videosUrl,
@@ -33,7 +34,8 @@ class AthleteModel extends AthleteEntity {
             positions: positions,
             characteristics: characteristics,
             videosUrl: videosUrl,
-            videos: videos);
+            videos: videos,
+            gender: gender);
 
   factory AthleteModel.fromJson(Map<String, dynamic> json) => AthleteModel(
         uid: json['uid'] ?? '',
@@ -47,6 +49,7 @@ class AthleteModel extends AthleteEntity {
         heightOfFather: json['height-of-father'] ?? 0.1,
         weight: json['weight'] ?? 0.1,
         favoriteLag: json['favorite-lag'] ?? '',
+        gender: json['gender'] ?? '',
         positions: List<String>.from(json['positions'] ?? []),
         videosUrl: List<String>.from(json['videos-url'] ?? []),
         videos: List<String>.from(json['videos'] ?? []),
@@ -66,6 +69,7 @@ class AthleteModel extends AthleteEntity {
         'heightOfFather': heightOfFather,
         'weight': weight,
         'favoriteLag': favoriteLag,
+        'gender': gender,
         'positions': positions,
         'characteristics': characteristics,
         'videosUrl': videosUrl,
@@ -85,6 +89,7 @@ class AthleteModel extends AthleteEntity {
         heightOfFather,
         weight,
         favoriteLag,
+        gender,
         positions,
         characteristics,
         videosUrl,
@@ -105,6 +110,7 @@ extension AthleteEntityToModel on AthleteEntity {
       heightOfFather: heightOfFather,
       weight: weight,
       favoriteLag: favoriteLag,
+      gender: gender,
       positions: positions,
       characteristics: characteristics,
       videosUrl: videosUrl,
@@ -124,6 +130,7 @@ extension AthleteModelToEntity on AthleteModel {
       heightOfFather: heightOfFather,
       weight: weight,
       favoriteLag: favoriteLag,
+      gender: gender,
       positions: positions,
       characteristics: characteristics,
       videosUrl: videosUrl,

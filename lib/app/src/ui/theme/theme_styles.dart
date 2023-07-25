@@ -46,7 +46,7 @@ class ThemeStyles {
       fontWeight: fontWeight ?? FontWeight.w400,
       fontSize: size ?? 18,
       fontStyle: FontStyle.normal,
-      color: color ?? ThemeService.colors.textSecondary,
+      color: color ?? ThemeService.colors.white,
     );
   }
 

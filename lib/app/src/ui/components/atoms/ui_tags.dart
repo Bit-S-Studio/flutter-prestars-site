@@ -26,15 +26,15 @@ class UiTags extends StatelessWidget {
                     children: List.generate(
                         selectedList.length,
                         (index) => InputChip(
-                            backgroundColor: ThemeService.colors.primary,
+                            backgroundColor: ThemeService.colors.white,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(4)),
                             label: Text(
                               selectedList[index],
-                              style: ThemeService.styles.exo2LightBody(),
+                              style: ThemeService.styles.exo2Body(),
                               maxLines: 2,
                             ),
-                            deleteIconColor: ThemeService.colors.white,
+                            deleteIconColor: ThemeService.colors.iconPrimary,
                             onDeleted: isEnabled
                                 ? () {
                                     onDeleteExpanded.call(selectedList[index]);

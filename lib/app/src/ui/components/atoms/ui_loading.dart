@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_prestarts_site/app/_exports.dart';
 
 class UiLoading extends StatelessWidget {
   final Color? color;
@@ -9,7 +10,7 @@ class UiLoading extends StatelessWidget {
     return Center(
       child: CircularProgressIndicator(
         strokeWidth: 1,
-        color: color ?? Colors.white,
+        color: color ?? ThemeService.colors.primary,
       ),
     );
   }

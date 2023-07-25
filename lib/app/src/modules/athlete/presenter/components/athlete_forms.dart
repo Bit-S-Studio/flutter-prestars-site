@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_prestarts_site/app/_exports.dart';
 import 'package:get_it/get_it.dart';
@@ -22,29 +21,9 @@ class AthleteForms extends StatelessWidget {
           children: [
             Flexible(
                 flex: context.isDesktop ? 10 : 8,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    AutoSizeText(
-                      'Formulário para inscrição',
-                      style: ThemeService.styles.exo2LightTitle(size: 32),
-                      maxFontSize: 32,
-                      minFontSize: 24,
-                      maxLines: 4,
-                    ),
-                    BasicForms(controller: controller)
-                  ],
-                )),
-            const Spacer(),
-            Flexible(
-                flex: 10,
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  child: DataForms(controller: controller),
-                ))
+                child: BasicForms(controller: controller)),
+            context.isDesktop ? const Spacer() : const SizedBox(height: 20),
+            Flexible(flex: 10, child: DataForms(controller: controller))
           ],
         ),
       ),

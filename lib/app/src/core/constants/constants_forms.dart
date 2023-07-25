@@ -15,6 +15,7 @@ class ConstantsForms {
   static const String heightOfFather = 'height-of-father';
   static const String weight = 'weight';
   static const String favoriteLag = 'favorite-lag';
+  static const String gender = 'gender';
   static const String positions = 'positions';
   static const String characteristics = 'characteristics';
   static const String videosUrl = 'videos-url';

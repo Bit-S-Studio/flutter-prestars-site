@@ -63,6 +63,13 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(height: context.isDesktop ? 80 : 60),
                     const FlowWidget(),
                     SizedBox(height: context.isDesktop ? 80 : 60),
+                    const Flexible(
+                      child: UiEmphasisText(
+                          textStart: 'Se cadastra aí e se torne um ',
+                          textEmphasis: 'PRE',
+                          textFinish: 'STAR.'),
+                    ),
+                    SizedBox(height: context.isDesktop ? 80 : 60),
                     const AthleteForms(),
                     SizedBox(height: context.isDesktop ? 80 : 60),
                   ],

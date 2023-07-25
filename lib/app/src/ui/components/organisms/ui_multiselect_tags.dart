@@ -83,8 +83,9 @@ class UiMultiSelectTags extends StatelessWidget {
             return completer.future;
           },
           hintText: hint ?? '',
-          suggestionWidget: (value) =>
-              AutoSizeText(value, style: ThemeService.styles.exo2Caption()),
+          suggestionWidget: (value) => AutoSizeText(value,
+              style: ThemeService.styles
+                  .exo2Caption(color: ThemeService.colors.primary)),
           labelText: labelText,
           type: TextfieldType.text,
           onSuggestionSelected: (value) => onPressedExpanded(value),
@@ -109,6 +110,6 @@ class UiMultiSelectTags extends StatelessWidget {
   Color? _getColorWithValid() {
     return !isValid && isEnabled && showErrors
         ? ThemeService.colors.danger
-        : ThemeService.colors.iconPrimary;
+        : ThemeService.colors.white;
   }
 }
