@@ -3,7 +3,6 @@ export 'buttons/_exports.dart';
 export 'fields/_exports.dart';
 export 'skeleton/_exports.dart';
 export 'title_with_line.dart';
-export 'ui_avatar.dart';
 export 'ui_dropdown_item.dart';
 export 'ui_loading.dart';
 export 'ui_logo.dart';

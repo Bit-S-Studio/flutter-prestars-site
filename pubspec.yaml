@@ -26,7 +26,6 @@ dependencies:
   google_fonts: ^4.0.4
   auto_size_text: ^3.0.0
   flutter_typeahead: ^4.6.2
-  cached_network_image: ^3.2.3
   shimmer: ^3.0.0
   firebase_core: ^2.14.0
   firebase_storage: ^11.2.4
