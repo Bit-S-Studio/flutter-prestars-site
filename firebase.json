@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "artifacts/web",
+    "public": "build/web",
     "site": "prestars",
     "ignore": [
       "firebase.json",
