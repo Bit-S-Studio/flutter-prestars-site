@@ -23,12 +23,12 @@ class AthleteTwo extends StatelessWidget {
               children: [
                 const Flexible(
                     child: UiEmphasisText(
-                        textStart: 'Grandes ',
-                        textEmphasis: 'estrelas ',
-                        textFinish: 'jogam em equipe')),
+                        textStart: 'Uma ',
+                        textEmphasis: 'estrela ',
+                        textFinish: 'precisa de visibilidade')),
                 Flexible(
                   child: AutoSizeText(
-                    'Adicione seus vídeos postados em outras plataformas, ou novos vídeos, uma estrela fortalece sua equipe',
+                    'Adicione seus vídeos postados em outras plataformas, ou novos vídeos, para que os clubes possam te conhecer',
                     maxFontSize: 30,
                     minFontSize: 18,
                     style: ThemeService.styles.exo2Subtitle(),

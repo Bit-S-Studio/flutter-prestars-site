@@ -22,7 +22,7 @@ class UiEmphasisText extends StatelessWidget {
         TextSpan(text: textEmphasis, style: ThemeService.styles.exo2Emphasis()),
         TextSpan(text: textFinish),
       ]),
-      maxFontSize: 52,
+      maxFontSize: 48,
       minFontSize: 20,
       style: ThemeService.styles.exo2Title(),
       textAlign: textAlign ?? TextAlign.start,

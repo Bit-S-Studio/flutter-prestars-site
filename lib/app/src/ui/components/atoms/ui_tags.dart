@@ -32,6 +32,7 @@ class UiTags extends StatelessWidget {
                             label: Text(
                               selectedList[index],
                               style: ThemeService.styles.exo2Body(),
+                              overflow: TextOverflow.ellipsis,
                               maxLines: 2,
                             ),
                             deleteIconColor: ThemeService.colors.iconPrimary,

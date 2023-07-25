@@ -34,7 +34,6 @@ class DataForms extends StatelessWidget {
             const UiField(
                 labelText: ConstantsLabels.heightOfFather,
                 formControlName: ConstantsForms.heightOfFather,
-                isMandatory: true,
                 enableLabel2: true,
                 isWhite: true,
                 type: TextfieldType.height),
