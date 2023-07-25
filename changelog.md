@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Removido develop do deploy para o firebase
+- Ajustado tamanho da letra input para 12
 
 ## [0.0.1] - 24/07/2023
 

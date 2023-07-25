@@ -31,7 +31,7 @@ class UiTags extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(4)),
                             label: Text(
                               selectedList[index],
-                              style: ThemeService.styles.exo2Body(),
+                              style: ThemeService.styles.exo2Body(size: 12),
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2,
                             ),
