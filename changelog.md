@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ajustado frase do segundo Flex do atleta
 - Ajustado bug de overflow na UiTags
 - Removido obrigatóriedade da altura do pai
+- Ajustado botão increva-se para inscreva-se
 
 ### Changed
 
