@@ -26,10 +26,9 @@ jobs:
     needs: init
     steps:
       - uses: actions/checkout@v3
-      - name: Flutter Install
-        uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.7.1"
+          flutter-version: "3.10.6"
           channel: "stable"
       - name: Restore packages
         run: flutter pub get
