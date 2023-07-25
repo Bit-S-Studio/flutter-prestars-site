@@ -16,14 +16,9 @@ class AthleteOne extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Flexible(
-              flex: 6,
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    image: DecorationImage(
-                        image: AssetImage(ThemeService.images.athleteOne),
-                        fit: BoxFit.cover)),
-              )),
+            flex: 6,
+            child: UiCachedImage(image: ThemeService.images.athleteOne),
+          ),
           const Spacer(flex: 1),
           Flexible(
             flex: 6,

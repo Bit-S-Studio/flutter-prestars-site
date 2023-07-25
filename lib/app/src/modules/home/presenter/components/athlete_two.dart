@@ -40,12 +40,9 @@ class AthleteTwo extends StatelessWidget {
           const Spacer(flex: 1),
           Flexible(
               flex: 6,
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    image: DecorationImage(
-                        image: AssetImage(ThemeService.images.athleteTwo),
-                        fit: BoxFit.cover)),
+              child: Flexible(
+                flex: 6,
+                child: UiCachedImage(image: ThemeService.images.athleteTwo),
               )),
         ],
       ),
