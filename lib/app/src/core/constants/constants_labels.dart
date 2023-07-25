@@ -86,4 +86,7 @@ class ConstantsLabels {
   static const favoriteLabLeft = 'Esquerda';
   static const gender = 'Gênero';
   static const videosUrl = 'Adicione links de videos de outras plataformas';
+  static const athletes = 'Para atletas';
+  static const teams = 'Para times';
+  static const home = 'Home';
 }

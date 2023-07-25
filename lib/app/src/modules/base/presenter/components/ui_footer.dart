@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../prestars_exports.dart';
+import '../../../../../../prestars_exports.dart';
 
 class UiFooter extends StatelessWidget {
   const UiFooter({super.key});

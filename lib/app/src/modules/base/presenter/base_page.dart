@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../prestars_exports.dart';
 
 class BasePage extends StatefulWidget {
@@ -28,10 +27,12 @@ class BasePage extends StatefulWidget {
 class _BasePageState extends State<BasePage>
     with AutomaticKeepAliveClientMixin<BasePage> {
   late ScrollController scrollController;
+  late BaseNavigatorController baseNavigatorController;
 
   @override
   void initState() {
     scrollController = ScrollController();
+    baseNavigatorController = BaseNavigatorController();
     super.initState();
   }
 
@@ -42,7 +43,8 @@ class _BasePageState extends State<BasePage>
         onWillPop: () async => true,
         child: Scaffold(
           backgroundColor: ThemeService.colors.background,
-          appBar: UiHeader.call(context, scrollController),
+          appBar:
+              UiHeader.call(context, scrollController, baseNavigatorController),
           body: SingleChildScrollView(
             controller: scrollController,
             child: Column(

@@ -5,11 +5,10 @@ import '../../../../../../prestars_exports.dart';
 
 part 'home_state.dart';
 
-class HomeController extends ValueNotifier<HomeState> {
-  HomeController() : super(InitHome());
+class HomeController extends ValueNotifier<int> {
+  HomeController() : super(0);
 
-  void init() async {
-    value = LoadingHome();
-    value = SuccessHome();
+  void changeValue({required int newValue}) {
+    value = newValue;
   }
 }
