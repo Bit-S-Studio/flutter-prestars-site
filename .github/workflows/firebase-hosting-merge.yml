@@ -23,6 +23,7 @@ jobs:
           fi
   build_and_deploy:
     runs-on: ubuntu-latest
+    needs: init
     steps:
       - uses: actions/checkout@v3
       - name: Flutter Install
