@@ -67,8 +67,10 @@ class _HomePageState extends State<HomePage> {
                       child: UiEmphasisText(
                           textStart: 'Se cadastra aí e se torne um ',
                           textEmphasis: 'PRE',
-                          textFinish: 'STAR.'),
+                          textFinish: 'STAR'),
                     ),
+                    SizedBox(height: context.isDesktop ? 80 : 60),
+                    const AlertCard(text: ConstantsStrings.alertRegister),
                     SizedBox(height: context.isDesktop ? 80 : 60),
                     const AthleteForms(),
                     SizedBox(height: context.isDesktop ? 80 : 60),

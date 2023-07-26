@@ -44,7 +44,7 @@ class GetTextInputType {
         return TextInputType.phone;
 
       case TextfieldType.date:
-        return TextInputType.datetime;
+        return TextInputType.number;
 
       case TextfieldType.time:
         return TextInputType.datetime;

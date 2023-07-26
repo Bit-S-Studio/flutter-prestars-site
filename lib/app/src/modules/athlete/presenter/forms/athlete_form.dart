@@ -57,6 +57,11 @@ class AthleteForm {
     videos.add(FormControl<XFile>(value: value));
   }
 
+  void deleteVideo(int index) {
+    final videos = formGroup.control(ConstantsForms.videos) as FormArray<XFile>;
+    videos.removeAt(index);
+  }
+
   set setPosition(String position) {
     formGroup.control(ConstantsForms.positionsSearch).value = position;
   }

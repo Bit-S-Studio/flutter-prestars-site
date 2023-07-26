@@ -21,4 +21,6 @@ class ConstantsStrings {
   static const String flowStepThree =
       "Clubes de todo o mundo vão poder te conhecer";
   static const String flowStepFour = "Chegou a hora de brilhar";
+  static const String alertRegister =
+      '* Estamos construindo essa plataforma, no momento apenas o cadastro está pronto. Mas fique tranquilo, seus lances cadastrados já estarão disponíveis para análises dos clubes, que poderão entrar em contato com você, se suas características chamarem atenção :) .';
 }

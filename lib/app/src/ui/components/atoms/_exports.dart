@@ -11,7 +11,7 @@ export 'ui_dot_page.dart';
 export 'ui_riched.dart';
 export 'ui_riched_no_border.dart';
 export 'expanded_line.dart';
-export 'grey_card.dart';
+export 'alert_card.dart';
 export 'ui_switch.dart';
 export 'ui_error_list.dart';
 export 'ui_tags.dart';

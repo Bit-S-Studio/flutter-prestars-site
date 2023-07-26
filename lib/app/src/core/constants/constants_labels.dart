@@ -80,10 +80,13 @@ class ConstantsLabels {
   static const heightOfFather = 'Altura do pai';
   static const weight = 'Peso';
   static const positionsTextField = 'Posições no campo';
-  static const characteristicsTextField = 'Caracteristicas';
+  static const characteristicsTextField = 'Caracteristicas de jogo';
   static const favoriteLab = 'Perna Favorita';
   static const favoriteLabRight = 'Direita';
   static const favoriteLabLeft = 'Esquerda';
   static const gender = 'Gênero';
-  static const videosUrl = 'Adicione links de videos de outras plataformas';
+  static const videosUrl =
+      'Adicione os links de seus vídeos publicados em outos sites, por exemplo YouTube';
+  static const videos =
+      'Se preferir adicione seus vídeos diretamente do seu dispositivo';
 }
