@@ -13,6 +13,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adicionado Section Navigator ao Header
 - Ajustado rotas do Section Navigator
 
+## [0.0.3] - 26/07/2023
+
+### Changed
+- Removido . do final da frase Se cadastra aí e se torne um PRESTARS
+- Editado label do videosUrl
+- Alterado KeyBoardInput da data para number
+
+### Added
+
+- Adicionado botão remover aos videos
+- Adicionado aviso de desenvolvimento
+- Adicionado label dos vídeos
+
 ## [0.0.2] - 25/07/2023
 
 ### Fixed

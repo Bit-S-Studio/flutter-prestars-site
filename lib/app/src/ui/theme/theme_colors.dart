@@ -20,6 +20,7 @@ class ThemeColors {
   Color get background => const Color(0xFFF7FCF7);
   Color get textQuarter => const Color(0xFF1B6425);
   Color get textTitle => const Color(0xFF494A4A);
+  Color get textReliable => const Color(0xFF4040FF);
   Color get crud => const Color(0xFFDEDFE0);
   Color get borderPrimary => const Color(0xFF066B30);
   Color get borderSecondary => const Color(0xFF64C65C);

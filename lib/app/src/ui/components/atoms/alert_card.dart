@@ -2,10 +2,10 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../prestars_exports.dart';
 
-class GreyCard extends StatelessWidget {
+class AlertCard extends StatelessWidget {
   final String text;
   final double? maxFontSize;
-  const GreyCard({super.key, required this.text, this.maxFontSize});
+  const AlertCard({super.key, required this.text, this.maxFontSize});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class GreyCard extends StatelessWidget {
           overflow: TextOverflow.visible,
           style: ThemeService.styles.exo2Title(
               size: 23,
-              color: ThemeService.colors.textWhite,
+              color: ThemeService.colors.textReliable,
               fontWeight: FontWeight.w400)),
     );
   }
