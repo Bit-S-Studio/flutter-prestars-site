@@ -39,11 +39,9 @@ class AthleteTwo extends StatelessWidget {
           ),
           const Spacer(flex: 1),
           Flexible(
-              flex: 6,
-              child: Flexible(
-                flex: 6,
-                child: UiCachedImage(image: ThemeService.images.athleteTwo),
-              )),
+            flex: 6,
+            child: UiCachedImage(image: ThemeService.images.athleteTwo),
+          ),
         ],
       ),
     );

@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Adicionado modulo de atletas
 - Adicionado modulo de base
+- Adicionado Section Navigator ao Header
+- Ajustado rotas do Section Navigator
 
 ## [0.0.2] - 25/07/2023
 

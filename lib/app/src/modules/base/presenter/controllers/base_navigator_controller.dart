@@ -14,7 +14,7 @@ class BaseNavigatorController extends ValueNotifier<List<TabEntity>> {
       _locationToTabIndex(GoRouterState.of(context).location);
 
   int _locationToTabIndex(String location) {
-    final index = value.indexWhere((t) => location.startsWith(t.route));
+    final index = value.indexWhere((t) => location == t.route);
     // if index not found (-1), return 0
     return index < 0 ? 0 : index;
   }

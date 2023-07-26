@@ -12,7 +12,13 @@ class UiHeader {
         elevation: 0,
         toolbarHeight: 80,
         centerTitle: false,
-        title: const UiLogo(),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const UiLogo(),
+            UiNavigator(controller: baseNavigatorController),
+          ],
+        ),
         actions: [
           context.isDesktop
               ? Padding(
@@ -28,7 +34,7 @@ class UiHeader {
                           curve: Curves.easeInOut, // Curva de animação
                         );
                       },
-                      label: 'Increva-se'),
+                      label: 'Inscreva-se'),
                 )
               : const SizedBox()
         ],
