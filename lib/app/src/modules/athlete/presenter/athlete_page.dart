@@ -46,6 +46,8 @@ class AthletePage extends StatelessWidget {
                 textFinish: 'STAR'),
           ),
           SizedBox(height: context.isDesktop ? 80 : 60),
+          const AlertCard(text: ConstantsStrings.alertRegister),
+          SizedBox(height: context.isDesktop ? 80 : 60),
           const AthleteForms(),
           SizedBox(height: context.isDesktop ? 80 : 60),
         ],
