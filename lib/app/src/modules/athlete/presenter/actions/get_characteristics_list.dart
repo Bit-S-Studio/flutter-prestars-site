@@ -11,6 +11,7 @@ class GetCharacteristicsList {
         '#interceptação',
         '#antecipação',
         '#marcação',
-        '#bola parada'
+        '#bola parada',
+        '#folego'
       ];
 }

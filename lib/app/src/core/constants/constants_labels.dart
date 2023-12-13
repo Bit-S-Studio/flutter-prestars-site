@@ -86,7 +86,7 @@ class ConstantsLabels {
   static const favoriteLabLeft = 'Esquerda';
   static const gender = 'Gênero';
   static const videosUrl =
-      'Adicione os links de seus vídeos publicados em outos sites, por exemplo YouTube';
+      'Adicione os links de seus vídeos publicados em outros sites, por exemplo YouTube';
   static const videos =
       'Se preferir adicione seus vídeos diretamente do seu dispositivo';
 }
